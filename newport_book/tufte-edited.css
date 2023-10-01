@@ -527,3 +527,6 @@ code {
     pre code { font-size: 13px; }
 }
 
+.gray {
+    color: #c0c0c0;
+}
