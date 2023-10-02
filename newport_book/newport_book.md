@@ -46,7 +46,7 @@ Cal's goal is essentially to answer the question:
 
 > **How should I plan my career?**
 
-*(I think it's strange that we call authors by their last name in writing when
+*(It's strange that we call authors by their last name in writing when
 we address people by first name in person. So I'm trying out referring to Cal as
 Cal instead of as "Newport," which would sound overly-formal if I were speaking
 out loud.)*
@@ -78,7 +78,8 @@ That's the book in a nutshell.
 
 The book was published in 2012, just as Cal was about to begin his tenure-track
 position as a computer science professor at Georgetown. (Below I'll go into more
-thoughts along the line of: He seems a bit early in his career to be giving
+thoughts along the line of: It seems a bit early in his career for him
+to be giving
 career-length advice; for now I'll focus on a more objective summary.) He had
 written a series of blog posts refuting the passion hypothesis --- the mandate
 to follow your dreams --- and they received a strong reception. He expanded on
@@ -109,8 +110,8 @@ life-scale strategy.
 
 I take basically everything with a grain of salt, and this book is no exception.
 I'm going to agree with ideas when they make sense to me and match my
-experience. While I'm about to include criticism of the book, note that I found
-it good enough to read and to write about.
+experience. While I'm about to include criticism, note that I found the book
+good enough to both read and write about.
 
 To some degree, the ideas presented here make intuitive sense. Nothing Cal says
 seems to be overtly mistaken. For example, I have often noticed a feeling of
@@ -182,9 +183,8 @@ was better for them than micromanaging me. I've felt similarly
 about people I've managed --- people who thrive with more
 control --- and voluntarily
 gave them more independence rather than waiting for them to
-request it. If anything, I'd say that friction against autonomy
-tells you something about your employer, rather than always
-indicating you've attained a certain threshold of value.
+request it. Friction against autonomy might tell you more about your
+employer's mindset than about whether you're seen as valuable.
 
 ## Idea: Carefully choose a mission for your work
 
@@ -214,12 +214,12 @@ without heroism.
 In 2006, Paul Graham published an essay called
 [*How to do what you love*](http://www.paulgraham.com/love.html).
 
-I think Paul is a compelling writer. So compelling, in fact, that
+Paul is a compelling writer. So compelling, in fact, that
 I put more than my usual effort into thinking critically about what
 he writes. Paul's essay on doing what you love presents ideas similar to the
 passion hypothesis --- the idea that you should follow your passions.
 
-It's more nuanced than that, however. I think what Paul really expresses is that
+It's more nuanced than that, however. What Paul really expresses is that
 society imposes on us a false dichotomy between work and play. He also argues
 that, if you want to be happy, loving what you do has to be part of it. The
 difference between this and the passion hypothesis is that Paul (I believe)
@@ -247,11 +247,11 @@ to perform a merge conflict in your mind.
 Although Cal does not explicitly say this, the tone of the
 book presents itself as a guide to happiness in terms of making
 large-scale career decisions.
-Yet the book feels like it's reacting to common mistakes rather
-than giving us a full career playbook.
+Yet the book is more a reaction to a few common mistakes
+than it is a full playbook.
 Or, if I'm being pessimistic, the writing comes across
 as someone who's good at publicity taking
-advantage of a few sticky ideas to sell a book (it's not purely that,
+advantage of a couple sticky ideas to sell a book (it's not purely that,
 but the mood feels salesy at times).
 
 There are many factors that contribute to career happiness.
