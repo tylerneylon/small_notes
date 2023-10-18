@@ -1,4 +1,5 @@
 #!/bin/bash
 for dir in */; do
-    cp -r $dir /Users/tylerneylon/Documents/homepage/tylerneylon.com/b/
+    mkdir -p /Users/tylerneylon/Documents/homepage/tylerneylon.com/b/$dir
+    cp -r $dir /Users/tylerneylon/Documents/homepage/tylerneylon.com/b/$dir
 done
