@@ -1,6 +1,6 @@
 % Summary and Analysis: So Good They Can't Ignore You
 % Tyler Neylon
-% 535.2023
+% 563.2023
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
