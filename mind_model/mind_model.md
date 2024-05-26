@@ -237,11 +237,11 @@ note to use a different voice recorder app. This kind of learning is not
 happening at the level of weight updates in a neural network. Rather, it's a
 more conceptual idea that is best seen as over-writing the key-value pair:
 
-    <I want to record an outline> -> <open voice app A>
+    [I want to record an outline] -> [open voice app A]
 
 by re-using the same key, and replacing the value, like so:
 
-    <I want to record an outline> -> <open voice app B>
+    [I want to record an outline] -> [open voice app B]
 
 I've phrased things this way specifically because human brains don't seem to be
 good at erasing past memories, but rather they seem to be able to *replace* keys
