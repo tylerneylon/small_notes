@@ -106,7 +106,7 @@ meaning of life, that's an action. I'll elaborate on this below.
 
 To-do: Explain the diagram briefly first.
 
-Insert the main model picture here.
+![Data flow diagram for a model of a mind.](img/mind_model.png)
 
 # Learning and memory
 
