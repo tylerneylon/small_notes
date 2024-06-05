@@ -61,8 +61,10 @@ well as some insight into how our own brains may work.
 # Goals of the Model
 
 I'm trying to make a system that can behave like a human.
-I won't try to measure consciousness. Rather, I'm aiming to achieve
-behavior like ours.
+Consciousness is a personal motivation, but I'm not going to focus on it as a
+goal because it's difficult to define well and people often disagree about it.
+This posts instead looks at some aspects of minds that --- while still
+challenging --- are a little easier to discuss.
 
 Specifically, I'm trying to build a system that has these features:
 
