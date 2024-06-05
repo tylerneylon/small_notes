@@ -71,9 +71,11 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   as well as some insight into how our own brains may work.</p>
   <h1 data-number="1" id="goals-of-the-model"><span
   class="header-section-number">1</span> Goals of the Model</h1>
-  <p>I’m trying to make a system that can behave like a human. I won’t
-  try to measure consciousness. Rather, I’m aiming to achieve behavior
-  like ours.</p>
+  <p>I’m trying to make a system that can behave like a human.
+  Consciousness is a personal motivation, but I’m not going to focus on
+  it as a goal because it’s difficult to define well and people often
+  disagree about it. This posts instead looks at some aspects of minds
+  that — while still challenging — are a little easier to discuss.</p>
   <p>Specifically, I’m trying to build a system that has these
   features:</p>
   <ul>
@@ -89,23 +91,22 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   class="header-section-number">2</span> The Model</h1>
   <p>I’m thinking about minds in terms of data flow between
   simultaneously-acting modules. If you have a computer with a GPU, a
-  multi-core CPU, and a camera attached, then there’s something similar
-  going on: each module (GPU, CPU, camera) is doing its own work. The
-  modules talk to each other and can wait for each other, but they don’t
-  have to.</p>
-  <p>One thing we already know about human brains is that they’re
-  incredibly parallel machines. Neurons don’t wait for each other, but
-  apparently react to signals as soon as they receive them. So it makes
-  sense to think of a brain as a vast neural network — one we can
-  understand better by seeing its architecture as a data flow diagram
-  between modules that continuously act in parallel.</p>
+  multi-core CPU, and a camera attached, then each module (GPU, CPU,
+  camera) can do its own work in parallel. The modules in a system like
+  this talk to each other, but they can always process information as
+  it’s received.</p>
+  <p>Human brains are incredibly parallel machines. Neurons don’t wait
+  for each other, but apparently react to signals as soon as they
+  receive them. So it makes sense to think of a brain as a vast neural
+  network — one we can understand better by seeing its architecture as a
+  data flow diagram between modules that continuously act in
+  parallel.</p>
   <h2 data-number="2.1" id="an-action-model"><span
   class="header-section-number">2.1</span> An action model</h2>
   <p>A central concept in this model is what I call an <em>action
   model</em>. The name is a natural evolution of <em>language
   models</em>, being systems that understand and can produce language.
-  That is, an action model understands and can produce
-  <em>actions</em>.</p>
+  Thus an action model understands and can produce <em>actions</em>.</p>
   <p>You can think of an LLM, in simple terms, like this:</p>
   <pre><code>  context -> LLM -> next_token</code></pre>
   <p>By analogy, an action model works like this:</p>
@@ -117,16 +118,85 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   <h2 data-number="2.2" id="the-model-at-a-high-level"><span
   class="header-section-number">2.2</span> The model at a high
   level</h2>
-  <p>To-do: Explain the diagram briefly first.</p>
+  <p>Here’s the model:</p>
   <figure>
   <img src="img/mind_model.png"
   alt="Data flow diagram for a model of a mind." />
   <figcaption aria-hidden="true">Data flow diagram for a model of a
   mind.</figcaption>
   </figure>
+  <p>Each arrow represents a flow of information. Solid arrows are what
+  I consider to be the most important flows.</p>
+  <p>A couple modules do a lot of work for us, but are easier to
+  understand: The <em>sensory inputs</em> provide everything we sense,
+  including vision, taste, temperature, pressure, and so on. I’m letting
+  this module perform some work as well, since (for example) our vision
+  system quickly provides us some analysis of what we see, so that we
+  tend to perceive visual objects rather than a raw image. The other
+  somewhat-simple module is the <em>motor control</em> which we can
+  think of as receiving a conceptual vector (for example, “scratch left
+  ear”), and it can do some processing to translate that high-level
+  command into a series of individual muscle commands. When you memorize
+  a piano song well enough, it feels as if your fingers know the song
+  better than you do, and I believe that indicates some kind of learning
+  has happened within the motor control module.</p>
+  <p>The <em>action model</em> has already been introduced. I’ve
+  included within it a <em>language encoder</em>, which translates
+  incoming signals — seeing written words, hearing spoken words, seeing
+  sign language — converting those into a vector space understood by the
+  system. Since I’m imagining an action model can be a slight
+  generalization of a language model, I’m expecting that such an action
+  model could naturally incorporate within itself a way to standardize
+  lexical concepts into consistent vectors. Similarly, the <em>language
+  decoder</em> is good at converting those conceptual vectors back out
+  to actions, such as speaking a sentence out loud, or writing something
+  down.</p>
+  <p>The <em>emotional state</em> module is doing a lot of work: It’s
+  meant to represent all of our bodily needs, such as feeling hungry or
+  tired, as well as our state of mind, such as feeling elated,
+  frustrated, nostalgic, or intrigued. In this model, our emotional
+  state can change based on what’s coming out of the action model, and
+  it also filters that output into the <em>recent memory</em>
+  module.</p>
+  <p>I’ve chosen this flow of data carefully. In effect, there are two
+  filters on what we store in recent memory: First, when the action
+  model processes a lot of incoming information, it will effectively pay
+  more attention to some information than the rest. As in a language
+  model, the unused information essentially disappears from the network
+  as it passes through later layers; the attended ideas persist until
+  the end. The second filter is based on our emotional state. When we’re
+  bored, what’s happening is not considered important, and not flagged
+  for longer-term memory. When we’re experiencing an emotional spike, a
+  lot more data is kept around in more detail. Our usual life tends to
+  be somewhere between these extremes.</p>
+  <p>Finally, I’ve called out one particular piece of data called a
+  <em>goal</em>. This is not a computational module, but rather a part
+  of the data feedback loop coming out of the action model and fed back
+  into itself. I’m imagining the action model as receiving a lot of data
+  that we could view as one giant vector, and likewise producing another
+  large vector. These large vectors might begin life in new brains as
+  “unformatted,” meaning that a person can learn to use that space as
+  they grow, rather than thinking of the vector data as pre-assigned to
+  given purposes. Within the vector representations, there’s room to
+  learn / define specific variables, and one of the most important
+  variables we learn is our current goal.</p>
+  <p>Just as a word can be captured by a vector, so can an action or a
+  (closely related) goal that we have in mind. In this mind model, our
+  current goal fundamentally shapes how we filter the incoming
+  information, and can be edited by the action model itself. We may even
+  have an effective <em>stack</em> of goals, a small data structure that
+  we can push new goals onto, and pop them off as we complete them. Or,
+  if you’re like me, a limited-size stack where tasks are often
+  forgotten because I keep thinking of new things to do.</p>
   <hr />
-  <h2 data-number="2.3" id="enabling-agency"><span
-  class="header-section-number">2.3</span> Enabling agency</h2>
+  <p>That’s the gist of the mind model. In the next several sections,
+  I’ll explain how I think this model can provide agency, learning,
+  thinking, and introspection.</p>
+  <h1 data-number="3" id="agency"><span
+  class="header-section-number">3</span> Agency</h1>
+  <hr />
+  <h2 data-number="3.1" id="enabling-agency"><span
+  class="header-section-number">3.1</span> Enabling agency</h2>
   <p>I’ll explain this idea first because it’s easy to understand even
   before I present the mind model.</p>
   <p>A large language model doesn’t have agency because it can only
@@ -143,8 +213,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   meaningful two-way conversation that includes pauses for the other
   speaker. That is, such an LLM can independently say whatever it likes
   whenever it likes, which is the lexical version of agency.</p>
-  <h2 data-number="2.4" id="an-action-model-1"><span
-  class="header-section-number">2.4</span> An action model</h2>
+  <h2 data-number="3.2" id="an-action-model-1"><span
+  class="header-section-number">3.2</span> An action model</h2>
   <p>You can think of an LLM, in simple terms, like this:</p>
   <p>context -&gt; LLM -&gt; next_token</p>
   <p>A core piece of the mind model here is an analogy to an LLM that
@@ -155,8 +225,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   If I wanted to say “hello,” then “say hello” is an action. If I want
   to walk to the kitchen, that’s an action. And if I want to ponder the
   meaning of life, that’s an action. I’ll elaborate on this below.</p>
-  <h2 data-number="2.5" id="the-model-at-a-high-level-1"><span
-  class="header-section-number">2.5</span> The model at a high
+  <h2 data-number="3.3" id="the-model-at-a-high-level-1"><span
+  class="header-section-number">3.3</span> The model at a high
   level</h2>
   <p>To-do: Explain the diagram briefly first.</p>
   <figure>
@@ -165,8 +235,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   <figcaption aria-hidden="true">Data flow diagram for a model of a
   mind.</figcaption>
   </figure>
-  <h1 data-number="3" id="learning-and-memory"><span
-  class="header-section-number">3</span> Learning and memory</h1>
+  <h1 data-number="4" id="learning-and-memory"><span
+  class="header-section-number">4</span> Learning and memory</h1>
   <p>How does this model account for the ability of a mind to learn?</p>
   <p>I think this is an important question because it’s a key difference
   between what a human mind can do and what an LLM can do. A typical LLM
@@ -270,8 +340,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   action memories are good are bad for the sake of learning. If a recent
   action was akin to hitting your thumb with a hammer, then you’ll have
   pain as a clue to no longer take that same action.</p>
-  <h2 data-number="3.1" id="meta-learning"><span
-  class="header-section-number">3.1</span> Meta-learning</h2>
+  <h2 data-number="4.1" id="meta-learning"><span
+  class="header-section-number">4.1</span> Meta-learning</h2>
   <p>Another kind of learning happens at a higher level, which requires
   longer-term thinking. For example, suppose you write a first draft of
   a book, and then give that book to some beta readers for feedback. You
@@ -302,9 +372,9 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   don’t seem to be good at erasing past memories, but rather they seem
   to be able to <em>replace</em> keys associated with pre-existing
   keys.</p>
-  <h3 data-number="3.1.1"
+  <h3 data-number="4.1.1"
   id="key-value-memory-in-humans-and-ai-models"><span
-  class="header-section-number">3.1.1</span> Key-value memory in humans
+  class="header-section-number">4.1.1</span> Key-value memory in humans
   and AI models</h3>
   <p>Consider a person with a bad habit, such as biting their nails.
   It’s notoriously difficult to enact a strategy of simply stopping such
@@ -336,13 +406,13 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   coincidence, the stance of this article is to look for functional
   equivalence in a mind model, so the similarity in behavior suffices to
   make this implementation model useful.</p>
-  <h3 data-number="3.1.2" id="how-the-mind-model-can-meta-learn"><span
-  class="header-section-number">3.1.2</span> How the mind model can
+  <h3 data-number="4.1.2" id="how-the-mind-model-can-meta-learn"><span
+  class="header-section-number">4.1.2</span> How the mind model can
   meta-learn</h3>
   <p>stuff (I think thinking is needed here, so I suggest segueing into
   the thinking section here.</p>
-  <h1 data-number="4" id="thinking"><span
-  class="header-section-number">4</span> Thinking</h1>
+  <h1 data-number="5" id="thinking"><span
+  class="header-section-number">5</span> Thinking</h1>
   <p>I think when we’re thinking, we have a feedback loop where the
   actions are purely internal and we seem to have an implicit
   candidate-and-test cycle where we have an idea and that idea can be
@@ -381,13 +451,13 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   decide the next action.</p>
   <p>Two questions: blindsight question, and then how can I express the
   idea of consciousness in this model?</p>
-  <h2 data-number="4.1" id="consciousness"><span
-  class="header-section-number">4.1</span> Consciousness</h2>
+  <h2 data-number="5.1" id="consciousness"><span
+  class="header-section-number">5.1</span> Consciousness</h2>
   <p>I think consciousness is the ability to answer questions like why
   did I do that, or did you notice what just happened — were you aware
   of something?</p>
-  <h2 data-number="4.2" id="blindsight"><span
-  class="header-section-number">4.2</span> Blindsight</h2>
+  <h2 data-number="5.2" id="blindsight"><span
+  class="header-section-number">5.2</span> Blindsight</h2>
   <p>If we think of there as existing many pieces of an action model in
   the brain, then what I can imagine happening in the blindsight case is
   that there is an action model that receives from vision, and is able

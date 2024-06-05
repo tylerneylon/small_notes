@@ -97,7 +97,7 @@ as a data flow diagram between modules that continuously act in parallel.
 
 A central concept in this model is what I call an *action model*.
 The name is a natural evolution of *language models*, being systems that
-understand and can produce language. That is, an action model understands and
+understand and can produce language. Thus an action model understands and
 can produce *actions*.
 
 You can think of an LLM, in simple terms, like this:
@@ -115,10 +115,79 @@ meaning of life, that pondering is also an action.
 
 ## The model at a high level
 
-To-do: Explain the diagram briefly first.
+Here's the model:
 
 ![Data flow diagram for a model of a mind.](img/mind_model.png)
 
+Each arrow represents a flow of information. Solid arrows are what I consider to
+be the most important flows.
+
+A couple modules do a lot of work for us, but are easier to understand: The
+*sensory inputs* provide everything we sense, including vision, taste,
+temperature, pressure, and so on. I'm letting this module perform some work as
+well, since (for example) our vision system quickly provides us some analysis of
+what we see, so that we tend to perceive visual objects rather than a raw image.
+The other somewhat-simple module is the *motor control* which we can think of as
+receiving a conceptual vector (for example, "scratch left ear"), and it can do
+some processing to translate that high-level command into a series of individual
+muscle commands. When you memorize a piano song well enough, it feels as if your
+fingers know the song better than you do, and I believe that indicates some
+kind of learning has happened within the motor control module.
+
+The *action model* has already been introduced. I've included within it a
+*language encoder*, which translates incoming signals --- seeing written
+words, hearing spoken words, seeing sign language --- converting those into a
+vector space understood by the system. Since I'm imagining an action model can
+be a slight generalization of a language model, I'm expecting that such an
+action model could naturally incorporate within itself a way to standardize
+lexical concepts into consistent vectors. Similarly, the *language decoder* is
+good at converting those conceptual vectors back out to actions, such as
+speaking a sentence out loud, or writing something down.
+
+The *emotional state* module is doing a lot of work: It's meant to represent all
+of our bodily needs, such as feeling hungry or tired, as well as our state of
+mind, such as feeling elated, frustrated, nostalgic, or intrigued. In this
+model, our emotional state can change based on what's coming out of the action
+model, and it also filters that output into the *recent memory* module.
+
+I've chosen this flow of data carefully. In effect, there are two filters on
+what we store in recent memory: First, when the action model processes a lot of
+incoming information, it will effectively pay more attention to some information
+than the rest. As in a language model, the unused information essentially
+disappears from the network as it passes through later layers; the attended
+ideas persist until the end. The second filter is based on our emotional state.
+When we're bored, what's happening is not considered important, and not flagged
+for longer-term memory. When we're experiencing an emotional spike, a lot more
+data is kept around in more detail. Our usual life tends to be somewhere between
+these extremes.
+
+Finally, I've called out one particular piece of data called a *goal*. This is
+not a computational module, but rather a part of the data feedback loop coming
+out of the action model and fed back into itself. I'm imagining the action model
+as receiving a lot of data that we could view as one giant vector, and likewise
+producing another large vector.
+These large vectors might begin life in new brains as "unformatted,"
+meaning that a person can
+learn to use that space as they grow, rather than thinking of the vector data as
+pre-assigned to given purposes.
+Within the vector representations, there's room to learn / define specific
+variables, and one of the most important variables we learn is our current goal.
+
+Just as a word can be captured by a vector, so can an action or a (closely
+related) goal that we have in mind. In this mind model, our current goal
+fundamentally shapes how we filter the incoming information, and can be edited
+by the action model itself. We may even have an effective *stack* of goals, a
+small data structure that we can push new goals onto, and pop them off as we
+complete them. Or, if you're like me, a limited-size stack where tasks are often
+forgotten because I keep thinking of new things to do.
+
+___
+
+That's the gist of the mind model. In the next several sections, I'll explain
+how I think this model can provide agency, learning, thinking, and
+introspection.
+
+# Agency
 
 ___
 
