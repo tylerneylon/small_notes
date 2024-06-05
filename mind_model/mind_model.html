@@ -47,42 +47,86 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   href="http://tylerneylon.com/b/mind_model/mind_model.html">html</a> |
   <a href="http://tylerneylon.com/b/mind_model/mind_model.pdf">pdf</a>
   <span class="math inline">\(\,\)</span>]</p>
-  <p>I’m working on a book about consciousness from the perspective of
-  machine learning, coding, and neuroscience with a dash of philosophy.
-  As a preliminary step in writing that book, I’d like to share a
-  concrete model of how I suspect human minds might work — and thus how
-  we might work on digital minds.</p>
+  <p>This post explains a simple model of how minds may work. I’m
+  motivated by the success of AI-based language models to look at the
+  future of digital minds. The model presented here is not detailed
+  enough for a full implementation, but it’s more detailed than the
+  popular models of minds I’ve been able to read about in my background
+  research.</p>
+  <p>I can imagine two goals of a mind model: to understand human
+  brains, or to create digital minds. These goals overlap because the
+  most impressive mind we know of is the human brain. (Please don’t
+  mistake ignorance for hubris! I’m sure other minds can exist that are
+  better.) Because of this overlap, I’ll aim for a mind model that can
+  account for human behavior — though my primary motivation is the
+  creation of digital minds.</p>
   <p>There’s still plenty of debate about whether or not a digital mind
   can ever be truly conscious, or have emotions or subjective
-  experiences as humans do. I’m convinced they can. But rather than
-  focus on that debate, in this post, I’d like to simply work in the
-  hypothetical world where digital minds are indeed capable of all the
-  internal experiences of human minds. If I’m wrong, then this post
-  becomes an interesting speculation; if I’m right, then this post is
-  something more — hopefully, actual progress toward both the creation
-  of digital minds as well as some insight into how our own brains my
-  work.</p>
-  <h1 data-number="1" id="the-model"><span
-  class="header-section-number">1</span> The Model</h1>
-  <p>The goal of this model is to capture how the human brain may work
-  on a functional level, ignoring details that most likely won’t be
-  useful in building a digital mind. The primary motivation is to make
-  progress toward digital minds, but I suspect this pursuit may shed
-  light on how brains work as a secondary benefit.</p>
-  <p>One principle is that I’m trying to make a system that can behave
-  like a human. I’m not trying to philosophically evaluate consciousness
-  — I’m just aiming to achieve the same behavior. I’m trying to build a
-  system that has these features:</p>
+  experiences as humans do. I’m convinced they can. Rather than focus on
+  that debate, I’d like to work in the hypothetical world where digital
+  minds are indeed capable of all the internal experiences of human
+  minds. If I’m wrong, then this becomes a fun collection of speculative
+  blueprints; if I’m right, then this post is something more —
+  hopefully, actual progress toward both the creation of digital minds
+  as well as some insight into how our own brains may work.</p>
+  <h1 data-number="1" id="goals-of-the-model"><span
+  class="header-section-number">1</span> Goals of the Model</h1>
+  <p>I’m trying to make a system that can behave like a human. I won’t
+  try to measure consciousness. Rather, I’m aiming to achieve behavior
+  like ours.</p>
+  <p>Specifically, I’m trying to build a system that has these
+  features:</p>
   <ul>
-  <li>Learning</li>
   <li>Agency</li>
+  <li>Learning</li>
   <li>Thinking</li>
   <li>Introspection</li>
   </ul>
-  <p>I think introspection is thinking along with the ability to think
-  about your own thoughts.</p>
-  <h2 data-number="1.1" id="enabling-agency"><span
-  class="header-section-number">1.1</span> Enabling agency</h2>
+  <p>I’ll show you the simple model, argue why it can enable behavior
+  like each of the above points, and I’ll finish with some notes about
+  the elusive word “consciousness.”</p>
+  <h1 data-number="2" id="the-model"><span
+  class="header-section-number">2</span> The Model</h1>
+  <p>I’m thinking about minds in terms of data flow between
+  simultaneously-acting modules. If you have a computer with a GPU, a
+  multi-core CPU, and a camera attached, then there’s something similar
+  going on: each module (GPU, CPU, camera) is doing its own work. The
+  modules talk to each other and can wait for each other, but they don’t
+  have to.</p>
+  <p>One thing we already know about human brains is that they’re
+  incredibly parallel machines. Neurons don’t wait for each other, but
+  apparently react to signals as soon as they receive them. So it makes
+  sense to think of a brain as a vast neural network — one we can
+  understand better by seeing its architecture as a data flow diagram
+  between modules that continuously act in parallel.</p>
+  <h2 data-number="2.1" id="an-action-model"><span
+  class="header-section-number">2.1</span> An action model</h2>
+  <p>A central concept in this model is what I call an <em>action
+  model</em>. The name is a natural evolution of <em>language
+  models</em>, being systems that understand and can produce language.
+  That is, an action model understands and can produce
+  <em>actions</em>.</p>
+  <p>You can think of an LLM, in simple terms, like this:</p>
+  <pre><code>  context -> LLM -> next_token</code></pre>
+  <p>By analogy, an action model works like this:</p>
+  <pre><code>  context -> Action Model -> next_action</code></pre>
+  <p>Conceptually, I’m thinking of an “action” as a superset of words.
+  If I wanted to say “hello,” then <em>say hello</em> is an action. If I
+  want to walk to the kitchen, that’s an action. And if I want to ponder
+  the meaning of life, that pondering is also an action.</p>
+  <h2 data-number="2.2" id="the-model-at-a-high-level"><span
+  class="header-section-number">2.2</span> The model at a high
+  level</h2>
+  <p>To-do: Explain the diagram briefly first.</p>
+  <figure>
+  <img src="img/mind_model.png"
+  alt="Data flow diagram for a model of a mind." />
+  <figcaption aria-hidden="true">Data flow diagram for a model of a
+  mind.</figcaption>
+  </figure>
+  <hr />
+  <h2 data-number="2.3" id="enabling-agency"><span
+  class="header-section-number">2.3</span> Enabling agency</h2>
   <p>I’ll explain this idea first because it’s easy to understand even
   before I present the mind model.</p>
   <p>A large language model doesn’t have agency because it can only
@@ -99,8 +143,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   meaningful two-way conversation that includes pauses for the other
   speaker. That is, such an LLM can independently say whatever it likes
   whenever it likes, which is the lexical version of agency.</p>
-  <h2 data-number="1.2" id="an-action-model"><span
-  class="header-section-number">1.2</span> An action model</h2>
+  <h2 data-number="2.4" id="an-action-model-1"><span
+  class="header-section-number">2.4</span> An action model</h2>
   <p>You can think of an LLM, in simple terms, like this:</p>
   <p>context -&gt; LLM -&gt; next_token</p>
   <p>A core piece of the mind model here is an analogy to an LLM that
@@ -111,8 +155,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   If I wanted to say “hello,” then “say hello” is an action. If I want
   to walk to the kitchen, that’s an action. And if I want to ponder the
   meaning of life, that’s an action. I’ll elaborate on this below.</p>
-  <h2 data-number="1.3" id="the-model-at-a-high-level"><span
-  class="header-section-number">1.3</span> The model at a high
+  <h2 data-number="2.5" id="the-model-at-a-high-level-1"><span
+  class="header-section-number">2.5</span> The model at a high
   level</h2>
   <p>To-do: Explain the diagram briefly first.</p>
   <figure>
@@ -121,9 +165,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   <figcaption aria-hidden="true">Data flow diagram for a model of a
   mind.</figcaption>
   </figure>
-  <p>Insert the main model picture here.</p>
-  <h1 data-number="2" id="learning-and-memory"><span
-  class="header-section-number">2</span> Learning and memory</h1>
+  <h1 data-number="3" id="learning-and-memory"><span
+  class="header-section-number">3</span> Learning and memory</h1>
   <p>How does this model account for the ability of a mind to learn?</p>
   <p>I think this is an important question because it’s a key difference
   between what a human mind can do and what an LLM can do. A typical LLM
@@ -227,8 +270,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   action memories are good are bad for the sake of learning. If a recent
   action was akin to hitting your thumb with a hammer, then you’ll have
   pain as a clue to no longer take that same action.</p>
-  <h2 data-number="2.1" id="meta-learning"><span
-  class="header-section-number">2.1</span> Meta-learning</h2>
+  <h2 data-number="3.1" id="meta-learning"><span
+  class="header-section-number">3.1</span> Meta-learning</h2>
   <p>Another kind of learning happens at a higher level, which requires
   longer-term thinking. For example, suppose you write a first draft of
   a book, and then give that book to some beta readers for feedback. You
@@ -259,9 +302,9 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   don’t seem to be good at erasing past memories, but rather they seem
   to be able to <em>replace</em> keys associated with pre-existing
   keys.</p>
-  <h3 data-number="2.1.1"
+  <h3 data-number="3.1.1"
   id="key-value-memory-in-humans-and-ai-models"><span
-  class="header-section-number">2.1.1</span> Key-value memory in humans
+  class="header-section-number">3.1.1</span> Key-value memory in humans
   and AI models</h3>
   <p>Consider a person with a bad habit, such as biting their nails.
   It’s notoriously difficult to enact a strategy of simply stopping such
@@ -293,13 +336,13 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   coincidence, the stance of this article is to look for functional
   equivalence in a mind model, so the similarity in behavior suffices to
   make this implementation model useful.</p>
-  <h3 data-number="2.1.2" id="how-the-mind-model-can-meta-learn"><span
-  class="header-section-number">2.1.2</span> How the mind model can
+  <h3 data-number="3.1.2" id="how-the-mind-model-can-meta-learn"><span
+  class="header-section-number">3.1.2</span> How the mind model can
   meta-learn</h3>
   <p>stuff (I think thinking is needed here, so I suggest segueing into
   the thinking section here.</p>
-  <h1 data-number="3" id="thinking"><span
-  class="header-section-number">3</span> Thinking</h1>
+  <h1 data-number="4" id="thinking"><span
+  class="header-section-number">4</span> Thinking</h1>
   <p>I think when we’re thinking, we have a feedback loop where the
   actions are purely internal and we seem to have an implicit
   candidate-and-test cycle where we have an idea and that idea can be
@@ -338,13 +381,13 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   decide the next action.</p>
   <p>Two questions: blindsight question, and then how can I express the
   idea of consciousness in this model?</p>
-  <h2 data-number="3.1" id="consciousness"><span
-  class="header-section-number">3.1</span> Consciousness</h2>
+  <h2 data-number="4.1" id="consciousness"><span
+  class="header-section-number">4.1</span> Consciousness</h2>
   <p>I think consciousness is the ability to answer questions like why
   did I do that, or did you notice what just happened — were you aware
   of something?</p>
-  <h2 data-number="3.2" id="blindsight"><span
-  class="header-section-number">3.2</span> Blindsight</h2>
+  <h2 data-number="4.2" id="blindsight"><span
+  class="header-section-number">4.2</span> Blindsight</h2>
   <p>If we think of there as existing many pieces of an action model in
   the brain, then what I can imagine happening in the blindsight case is
   that there is an action model that receives from vision, and is able

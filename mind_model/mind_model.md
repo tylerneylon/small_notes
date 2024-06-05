@@ -31,40 +31,93 @@ Formats:
  $\,$
 ]
 
-I'm working on a book about consciousness from
-the perspective of machine learning, coding, and neuroscience with a dash of
-philosophy. As a preliminary step in writing that book, I'd like to share a
-concrete model of how I suspect human minds might work --- and thus how we might
-work on digital minds.
+This post explains a simple model of how minds may work.
+I'm motivated by the success of AI-based language models to look at the future
+of digital minds.
+The model presented here is not detailed
+enough for a full implementation, but it's more detailed than the popular models
+of minds I've been able to read about in my background research.
+
+I can imagine two goals of a mind model: to understand human brains, or to
+create digital minds.
+These goals overlap
+because the most impressive mind we know of is the
+human brain. (Please don't mistake ignorance for hubris! I'm sure other minds
+can exist that are better.) Because of this overlap, I'll aim for a mind model
+that can account for
+human behavior --- though my primary motivation is the creation of digital
+minds.
 
 There's still plenty of debate about whether or not a digital mind can ever be
 truly conscious, or have emotions or subjective experiences as humans do. I'm
-convinced they can. But rather than focus on that debate, in this post, I'd like
-to simply work in the hypothetical world where digital minds are indeed capable
-of all the internal experiences of human minds. If I'm wrong, then this post
-becomes an interesting speculation; if I'm right, then this post is something
+convinced they can. Rather than focus on that debate, I'd like
+to work in the hypothetical world where digital minds are indeed capable
+of all the internal experiences of human minds. If I'm wrong, then this
+becomes a fun collection of speculative blueprints; if I'm right, then
+this post is something
 more --- hopefully, actual progress toward both the creation of digital minds as
-well as some insight into how our own brains my work.
+well as some insight into how our own brains may work.
 
-# The Model
+# Goals of the Model
 
-The goal of this model is to capture how the human brain may work on a
-functional level, ignoring details that most likely won't be useful in building
-a digital mind. The primary motivation is to make progress toward digital minds,
-but I suspect this pursuit may shed light on how brains work as
-a secondary benefit.
+I'm trying to make a system that can behave like a human.
+I won't try to measure consciousness. Rather, I'm aiming to achieve
+behavior like ours.
 
-One principle is that I'm trying to make a system that can behave like a human.
-I'm not trying to philosophically evaluate consciousness --- I'm just aiming to
-achieve the same behavior. I'm trying to build a system that has these features:
+Specifically, I'm trying to build a system that has these features:
 
-* Learning
 * Agency
+* Learning
 * Thinking
 * Introspection
 
-I think introspection is thinking along with the ability to think about your own
-thoughts.
+I'll show you the simple model, argue why it can enable behavior like each of
+the above points, and I'll finish with some notes about the elusive word
+"consciousness."
+
+# The Model
+
+I'm thinking about minds in terms of data flow between simultaneously-acting
+modules.
+If you have a computer with a GPU, a multi-core CPU, and a camera attached, then
+there's something similar going on: each module (GPU, CPU, camera) is doing its
+own work. The modules talk to each other and can wait for each other, but they
+don't have to.
+
+One thing we already know about human brains is that they're incredibly
+parallel machines. Neurons don't wait for each other, but apparently react to
+signals as soon as they receive them. So it makes sense to think of a brain as a
+vast neural network --- one we can understand better by seeing its architecture
+as a data flow diagram between modules that continuously act in parallel.
+
+## An action model
+
+A central concept in this model is what I call an *action model*.
+The name is a natural evolution of *language models*, being systems that
+understand and can produce language. That is, an action model understands and
+can produce *actions*.
+
+You can think of an LLM, in simple terms, like this:
+
+    context -> LLM -> next_token
+
+By analogy, an action model works like this:
+
+    context -> Action Model -> next_action
+
+Conceptually, I'm thinking of an "action" as a superset of words.
+If I wanted to say "hello," then *say hello* is an action. If I want to
+walk to the kitchen, that's an action. And if I want to ponder the
+meaning of life, that pondering is also an action.
+
+## The model at a high level
+
+To-do: Explain the diagram briefly first.
+
+![Data flow diagram for a model of a mind.](img/mind_model.png)
+
+
+___
 
 ## Enabling agency
 
