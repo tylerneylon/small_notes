@@ -82,12 +82,13 @@ the above points, and I'll finish with some notes about the elusive word
 I'm thinking about minds in terms of data flow between simultaneously-acting
 modules.
 If you have a computer with a GPU, a multi-core CPU, and a camera attached, then
-there's something similar going on: each module (GPU, CPU, camera) is doing its
-own work. The modules talk to each other and can wait for each other, but they
-don't have to.
+each module (GPU, CPU, camera) can do its
+own work in parallel.
+The modules in a system like this talk to each other, but they can always
+process information as it's received.
 
-One thing we already know about human brains is that they're incredibly
-parallel machines. Neurons don't wait for each other, but apparently react to
+Human brains are incredibly parallel machines.
+Neurons don't wait for each other, but apparently react to
 signals as soon as they receive them. So it makes sense to think of a brain as a
 vast neural network --- one we can understand better by seeing its architecture
 as a data flow diagram between modules that continuously act in parallel.
