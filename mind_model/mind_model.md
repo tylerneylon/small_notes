@@ -183,11 +183,38 @@ forgotten because I keep thinking of new things to do.
 
 ___
 
-That's the gist of the mind model. In the next several sections, I'll explain
-how I think this model can provide agency, learning, thinking, and
+That's the gist of the mind model. In the next few sections, I'll explain
+how this model can provide agency, learning, thinking, and
 introspection.
 
 # Agency
+
+I'll explain this idea first because it's the simplest feature to achieve, and
+it's essentially independent from the present mind model.
+
+A large language model doesn't have agency because it can only respond to input.
+
+However, we can imagine a change that adds agency to any LLM-like system. Think
+of a model that receives two input streams that are interwoven together. One
+input stream is from the person talking to the model, and the other is the model
+being able to see its own output, which is the way current LLMs operate --- they
+need to see their own output to keep talking.
+
+Now the LLM can choose to switch, at its own discretion, back and forth between
+a talking and listening mode.
+When the LLM wants to listen, it can produce a special `<listening>` token
+many times in a row, until it wants to say something. When it wants to speak, it
+outputs what it wants to say instead of the `<listening>` token.
+
+In this way, the model can run continously while 
+enabling a meaningful two-way conversation that includes pauses for the other
+speaker. It can independently say whatever it likes
+whenever it likes. This is the lexical version of agency, and it applies
+perfectly well to the mind model sketched above, which does indeed receive both
+sensory inputs as well as feedback from its own output.
+
+---
+Old stuff below here.
 
 ___
 
