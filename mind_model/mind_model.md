@@ -42,11 +42,16 @@ I can imagine two goals of a mind model: to understand human brains, or to
 create digital minds.
 These goals overlap
 because the most impressive mind we know of is the
-human brain. (Please don't mistake ignorance for hubris! I'm sure other minds
-can exist that are better.) Because of this overlap, I'll aim for a mind model
+human brain[^1]. 
+Because of this overlap, I'll aim for a mind model
 that can account for
 human behavior --- though my primary motivation is the creation of digital
 minds.
+
+<!-- TODO: Turn the footnote into a side note. -->
+
+[^1]: Please don't mistake ignorance for hubris! I'm sure other minds
+can exist that are better.
 
 There's still plenty of debate about whether or not a digital mind can ever be
 truly conscious, or have emotions or subjective experiences as humans do. I'm
@@ -189,16 +194,22 @@ introspection.
 
 # Agency
 
-I'll explain this idea first because it's the simplest feature to achieve, and
-it's essentially independent from the present mind model.
+I'll explain how agency can be achieved first because it's the simplest of our
+goals to accomplish, and it's somewhat independent from the present mind
+model.
 
-A large language model doesn't have agency because it can only respond to input.
+A large language model doesn't have agency because it can only react to input;
+it can't independently take action.
 
 However, we can imagine a change that adds agency to any LLM-like system. Think
-of a model that receives two input streams that are interwoven together. One
-input stream is from the person talking to the model, and the other is the model
-being able to see its own output, which is the way current LLMs operate --- they
-need to see their own output to keep talking.
+of a model that receives two interwoven input streams. One
+input stream is the person talking to the model, and the other is the model
+being able to see its own output. Current LLMs see both of these streams, but
+they're set up so that only one person at a time can talk --- the LLM or the
+user.
+The difference here is that the model is designed from the start to
+see its own feedback, constantly, as well as real-time input from "the
+outside," such as the user.
 
 Now the LLM can choose to switch, at its own discretion, back and forth between
 a talking and listening mode.
@@ -212,6 +223,11 @@ speaker. It can independently say whatever it likes
 whenever it likes. This is the lexical version of agency, and it applies
 perfectly well to the mind model sketched above, which does indeed receive both
 sensory inputs as well as feedback from its own output.
+
+# Memory and Learning
+
+
+
 
 ---
 Old stuff below here.
