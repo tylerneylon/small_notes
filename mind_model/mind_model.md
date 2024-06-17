@@ -226,8 +226,227 @@ sensory inputs as well as feedback from its own output.
 
 # Memory and Learning
 
+It might sound surprising to say that a "machine learned" LLM doesn't learn.
+What I mean is that, in their standard mode of operation, modern LLMs don't
+modify any internal state in reaction to the conversations they have. The first
+wave of LLMs would completely forget what everyone said as soon as its context
+window was full. As I'm writing this, some systems like ChatGPT, have been
+augmented so that they "remember" certain facts. While I can't confirm details
+internal to OpenAI, my educated guess is that these facts are available to the
+model because they can be selectively added to the prompt. That is, I believe
+the only common way for LLMs to "learn" today is to implement an additional
+system to store data to be learned, and to selectively insert that data into
+prompts when we think it might be useful.
 
+This is different from the way we experience life because we gain new abilities,
+and often the things we remember don't seem to be part of some internal prompt.
+For example, when you speak out loud, you don't feel as if your brain chose a
+subset of 100 candidate words to present to you, and you chose from amongst
+those.
 
+Rather, it does seem that the behavior of our organic neurons is updated in
+response to what happens to us. The equivalent of this in the mind
+model is to update
+weights based on experiences.
+
+## Story memory and action memory
+
+To explain the idea in this mind model, I'll split memory into two broad
+categories:
+
+* *Story memory* is the memory of everything that's happened to you; and
+* *action memory* is the modification of how you act based on positive or
+  negative feedback.
+
+I'll motivate these categories with a simple example. If a stranger says to you,
+"hey, you can definitely trust me!" then you can immediately store this
+narrative element of your life: this person said these words. Now, is what they
+said *true*? That's a different matter, and one you should probably decide based
+on more evidence. The *fact* that they said these words can safely go into story
+memory without fact-checing. The *idea* that they're trust-worthy is an
+uncertain claim we can keep around, flagged as "dubious" until further notice.
+
+When it comes to decisions we make, it's not always obvious if it was a good
+decision until some later point in time. Consider making a move in chess. If
+your opponent surprises you with an unseen checkmate two moves later, you might
+retrospectively realize a particular move had been a mistake. This is an example
+of delayed feedback on the quality of your decision. When you have delayed
+feedback, it's useful if you can later reinforce good decisions, or discourage
+repetition of mistakes.
+
+The motivation for the "recent memory" module in the mind model is a place that
+can essentially
+memorize exactly what has happened recently before it's baked into the action
+model. I suspect this is useful because, as you fine-tune LLMs, you can easily
+cause catastrophic forgetting, which is the effective erasure of old memories.
+In other words, in practice it seems that new memories are added
+carefully, perhaps in order to keep old memories intact.
+Another use of the recent memory module is to provide
+a delay to considering my own actions as good until after I've received feedback
+about that action.
+
+A third motivation to have a separate recent memory module is that a detailed
+memory of the past few hours is much more valuable that an equally-detailed
+memory of some random window of a few hours from when you were four years old.
+The usefulness of story memory decreases rapidly with time, and there's a
+need to filter what's stored due to the sheer volume of sensory input in
+comparison with the finite capacity in your action memory.
+Because recent memories tend to be more useful, it's convenient to have a
+rolling window of accurate
+memories that are forgotten as enough time passes.
+
+This breakdown of memory types might account for these features of human memory:
+
+* We seem to have a small memory capacity that we receive with almost no effort
+  or special attention spent on
+  the thing being remembered. George Miller did work to establish that
+  most people can quickly remember about seven items from an arbitrary list.
+  That memory might fit into the feedback vectors of the action model itself.
+  This memory disappears as soon as we think enough about something else.
+* Different people have different recent memory capacities, but it's common to
+  remember what you ate for breakfast this morning, but not what you ate for
+  breakfast several days ago, ignoring predictability (such as if you cheat by
+  eating the same thing for breakfast every day). This type of memory matches
+  what can fit into the recent memory module.
+* Longer-term memories don't seem to have a pre-determined time limit, but they
+  do tend to fade over time. This pattern is consistent with knowledge baked
+  into LLMs, and so can match the way an action model would effectively remember
+  things --- without a time limit, but with the ability to fade over time,
+  especially if not referenced for a long time.
+
+Human brains seem to have separate
+locations for long-term memories and whatever our equivalent of an action model
+is. Cases of amnesia suggest this: People can forget much of their past while
+otherwise acting normally. If our memories and behavior depended on the same set
+of neurons, then this wouldn't be possible. However, in the mind model above,
+I've let the long-term memory be implicitly part of the action model because
+this is effectively how language models currently store their version of
+memories.
+
+People tend to remember events in more detail when their emotions were strong at
+the time. Conversely, people tend to forget moments when they were bored or not
+paying attention. Think of the last time you took a well-worn route, such as
+your daily commute to work. You probably don't remember how you spent much of
+that commute, or at least, you probably don't remember the details that don't
+matter, such as the color of the car in front of you at a certain intersection.
+
+The mind model accounts for this by filtering memories through emotional states.
+In order for the model to remember something, it must be both (a) something the
+action model has paid attention to, and (b) something the mind cares to remember
+based on the emotional state. In addition, the emotional state is part of the
+context for the action model, so that goals are influenced by how the mind
+feels, and what the mind pays attention to is likewise influenced by feelings.
+For example, if the mind is in a happy mood, it's more likely to appreciate the
+positive aspects of a conversation; if it's feeling defensive, it's more likely
+to notice a perspective from which a conversation can be seen as judgmental.
+
+I'm using the word "emotion" in a broad sense meant to
+include pleasure, pain, boredom, happiness, frustration, and any combination of
+states of mind that have a not-purely-rational feeling associated with them.
+The most basic aspect of this --- akin to simple pleasure or pain --- can be
+seen as a relatively quick feedback loop to inform if the recent action memories
+are good are bad for the sake of learning. If a recent action was akin to
+hitting your thumb with a hammer, then you'll have pain as a clue to no longer
+take that same action. The model captures pain as negative feedback from the
+emotional state.
+
+## Meta-learning
+
+Another kind of learning happens at a higher level, which requires longer-term
+thinking. For example, suppose you write a first draft of a book, and then give
+that book to some beta readers for feedback. You can view this as a process with
+many months between the action first taken --- writing your first word of a new
+book --- and receiving useful feedback on that action. The recent memory is no
+longer a useful vehicle for this kind of learning.
+
+In this case, I suspect humans learn a process in a more explicit manner. I'm
+convinced that humans learn rational behaviors as action sequences which are
+initiated by triggers. For example, when I want to write an idea that's
+already well formed in my mind, I'll either record a voice memo of the outline,
+or I'll type an outline draft in google docs. That's part of my personal
+process. The trigger is the combination of (a) wanting to write an article, and
+(b) not needing to do more research, that is, feeling confident I'm ready to
+write. The action sequence, at a high level, is to make the outline.
+
+Now suppose I get feedback on my action sequence. For example, maybe the voice
+recorder app on my phone deletes a file due to a bug. Then I'll make a mental
+note to use a different voice recorder app. This kind of learning is not
+happening at the level of weight updates in a neural network. Rather, it's a
+more conceptual idea that is best seen as over-writing the key-value pair:
+
+    [I want to record an outline] -> [open voice app A]
+
+by re-using the same key, and replacing the value, like so:
+
+    [I want to record an outline] -> [open voice app B]
+
+I've phrased things this way specifically because human brains don't seem to be
+good at erasing past memories, but rather they seem to be able to *replace*
+values
+associated with pre-existing keys.
+
+### Key-value memory in humans and AI models
+
+Consider a person with a bad habit, such as biting their nails. It's notoriously
+difficult to enact a strategy of simply stopping such a habit. If you do this
+and your thought is "I'll just stop," you're likely to fail. However, if you
+*replace* the bad habit with something else, you're more likely to succeed. For
+example, you can notice the situations where you're most likely to bite your
+nails --- such as sitting in a classroom and somewhat bored --- and then teach
+yourself to take a *different action* in those same contexts. For example, you
+might use a fidget spinner instead of nail-biting. This is a human-oriented
+example of key deletion being hard ("key deletion" here would be like ignoring
+the trigger --- *bored in a classroom* -- that tends to elicit your bad habit),
+but value-updating being possible ("value-updating" meaning that the trigger,
+*bored in a classroom*, still means something to you, but now your reaction is
+updated).
+
+The internal mechanisms of modern language models are similar. They
+fundamentally rely on the transformer module, which is built on key-value
+lookups. Transformer-based models learn to ask internal queries (key lookups)
+encoded as vectors (a list of specific, but somewhat noise-tolerant, numbers).
+Once a model has learned to look for a certain key, it's hard to unlearn. To
+change the model's behavior, it seems easier to change what the key points to
+rather than to get the model to change so that it ignores the trigger
+altogether.
+
+The similarity between these two "add-only" mechanisms may not be a coincidence;
+perhaps brains internally use something akin to the key-value pairs, just as the
+transformer does.
+
+### How the mind model can meta-learn
+
+Meta-learning can happen in the mind model in a few ways:
+
+* **Planning**: When you understand you want to take on a new behavior in the
+  future, you can perform explicit planning for your eventual actions. For
+  example, you might put something on your calendar, or write down a list of
+  things you want to do today. In this case, the model can simple capture the
+  actions of using a calendar, or of writing a list, and the higher-level goals
+  of these actions are only indirectly captured by the neural weights.
+* **Association**: Often you don't know when you'll need to use a new piece of
+  knowledge, such as learning to ask directions in a new language. In this case,
+  it's useful if you can recall a relatively unpracticed action based on the
+  correct context. The model could account for this in the following way: When
+  you learn ahead of time, you have an understanding of the future context where
+  the action will be useful, so that future context can be linked with the
+  knowledge. The action itself can be stored as well as possible either through
+  practice (such as language learning) or through understanding (such as reading
+  a how-to guide).
+* **Problem-solving**: There are other kinds of meta-learning, separate from
+  either planning or receiving knowledge. If you're faced with a
+  problem you've never solved before, and you don't know where to look up an
+  answer (or don't want to), then you can try to simulate the probem in your
+  head, and mentally consider potential solutions. If you arrive at an idea you
+  like, this is it's own kind of learning.
+
+I'd say this last kind of learning is based on *thinking*, so now is a good time
+to switch gears --- let's take a look at how the mind model can capture
+sophisticated thoughts.
+
+# Thinking
+
+(This is where I am in my writing.)
 
 ---
 Old stuff below here.
