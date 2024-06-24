@@ -450,7 +450,7 @@ Suppose you've just learned how to play tic-tac-toe, and it's your turn. This is
 an example of thinking that's easy to think about. You're "naughts" (circles),
 and it's your turn on this board:
 
-![It's your turn. Should you go in the middle of the board?](img/tic-tac-toe.png)
+![It's your turn. Should you go in the middle of the board?](img/tic-tac-toe.png){.maxwidth400px}
 
 You're considering the center square for your next move. I'm suggesting this
 example because, if you're brand new to tic-tac-toe, it's not immediately

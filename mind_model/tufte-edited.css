@@ -530,3 +530,8 @@ code {
 .gray {
     color: #c0c0c0;
 }
+
+.maxwidth400px {
+    margin: 0 calc(50% - 200px);
+    max-width: 400px;
+}
