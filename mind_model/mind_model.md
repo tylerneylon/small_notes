@@ -753,6 +753,88 @@ be the same.
 This is not the place for a full counterargument, but I do want to include a
 brief sketch of a reply. 
 
+## Negative Arguments
+
+I'm using the term *negative argument* to talk about
+arguments saying that something is impossible, or that
+another argument is wrong, all without saying what is
+possible or what is correct. Contrast that with a
+*positive argument*, one which says something is possible,
+or says that such-and-such is the correct answer to
+a question. These are informal but intuitive terms.
+
+Historically, many arguments about subjective experience
+have been negative --- people either saying you can't understand
+everything about it scientifically, or other people saying
+such arguments are wrong. I'll mention some of these arguments,
+but I'm personally more interested in the positive argument
+I'll present afterwards.
+
+Next I'll give a caricature of a back-and-forth discussion
+about subjective experience. I'll present two sides, Nagel's begin
+*anti-strong-AI* (arguing that no software can have the same subjective
+experiences as humans), and the other side being *pro-strong-AI*.
+
+1. (Anti-strong-AI) Our internal experiences are private and subjective, and,
+   despite our ability to talk about brains scientifically, that science will
+   always be different from truly experiencing what it's like to be such a mind.
+   Any recreation of a mind will thus miss out on correctly capturing that
+   internal experience.
+2. (Pro-strong-AI) Hang on --- if you really believe that, then suppose I create
+   a perfect, atom-for-atom, clone of your entire body. You're arguing that this
+   perfect clone won't have the same kind of internal experiences as the
+   original you. This is basically a disbelief in the ability of physics to
+   correctly describe what happens in the world --- a well-established
+   philosophical position. Are you giving up on physics?
+3. (Anti-strong-AI) That's not quite fair because you're talking about a
+   hypothetical situation that we can't create. In any realistic simulation of a
+   brain, the internal experience is different, and that's what I'm talking
+   about.
+4. (Pro-strong-AI) Ok, let's switch the thought experiment. We're getting closer
+   to a reality of simulating the actions of each neuron in a human brain. If we
+   did that, my argument still holds. If you think a simulated brain and a real
+   brain can behave the same way, but there's some deep difference between them,
+   that's again a conclusion that there's something different that no physical
+   experiment could measure. It's an extraordinary claim, and the onus of proof
+   is on your side, not on mine.
+
+INSERT SEGUE HERE
+
+## The Positive Argument
+
+What does this mind model contribute to the above discussion?
+
+The negative arguments are like people discussing the possibility of human
+flight before airplanes were invented. (Admittedly, that's a biased simile.)
+But a great counterargument to "people will never fly" is "I made an airplane."
+I realize the mind model presented here is untested, incomplete, and in need of
+further work. At the same time, it is a step forward, and can serve as a
+meaningful answer to the challenging question: How can we even *begin* to
+explain subjective experiences scientifically?
+
+For example, when I look at a red apple, I experience a sensation of redness in
+my mind. What might that correspond to in a mind model? This one is easy: There
+can be a point in space that represents redness. If I ask the model about the
+color, it can focus on that aspect of its sensory inputs. Internally, this might
+look like an attention lookup in which the query vector is asking "what color is
+that object?" the key vector is saying "this is a color for that object", and
+the value vector is saying "it's red."
+
+It might seem overly simplistic to assume something like: For every word X
+there's an "X-ness" vector that captures what it's like to perceive X. But this
+mind model isn't so simple, after all. For example, if the mind model sees a
+color between red and orange --- a specific hue that it has no word for --- then
+it can still have a vector to represent that color, and it can still have the
+same kind of experience it had for redness, but for any color. In other words,
+this is no finite or hand-made list of possible experiences, but a vast world of
+nuanced, combination-friendly concepts that have been learned.
+
+# What's next?
+
+
+
+
+
 
 
 
