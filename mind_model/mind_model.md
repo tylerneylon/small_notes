@@ -122,7 +122,7 @@ meaning of life, that pondering is also an action.
 
 Here's the model:
 
-![Data flow diagram for a model of a mind.](img/mind_model.png)
+![Data flow diagram for a model of a mind.](img/mind_model_v2.png)
 
 Each arrow represents a flow of information. Solid arrows are what I consider to
 be the most important flows.
@@ -636,8 +636,122 @@ are out of scope.
 We just need to know that these more complex actions and ideas are enabled,
 just as a simple Turing machine can support any potential program.
 
+# Introspection
 
+Introspection is an awareness of your internal experiences --- your thoughts and
+feelings. If we're playing chess, and you make a move, you can explain your
+thinking behind that move.
 
+Thoughts and feelings can exist without awareness of them.
+I suspect dogs can think to solve problems,
+such as how to get at some food they want.
+But I'd also guess they don't think about their own thoughts.
+There are also examples within human minds of some simple kind of
+reasoning happening beyond our awareness. If you close your eyes and hold up two
+books of clearly different weights, you immediately know which one is heavier
+without having to think about it. Our brain performs some computations without
+us having insight into those computations.
+
+Let's see how the mind model can accommodate awareness of its own thoughts.
+As a warm-up, if I were to ask the mind model to remind me of the last three
+moves in a chess game we were playing, it could perform a lookup in the recent
+memory module and give me the answer. Well, introspection can work in the same
+way if thoughts themselves are treated as part of the story memory.
+
+I can spell this out in more detail: Story memory is a record of what's been
+happening. The obvious story are the sequences of events in the outside world.
+But keep in mind that what is received by the recent memory module is an
+internal vector representation that came out of the action model, and was
+further filtered by the emotional state. So, even for external events, what's
+really being stored is the mind's own interpretation of those events. Instead of
+storing a video of a chess game, the mind stores its own conceptual
+understanding of those moves.
+
+When it comes to thoughts, those are actions taken and perceived by the mind
+model. As events, thoughts are peers with external events.
+For example, the incoming
+perception "my opponent has taken my queen" is received, understood, and send
+out for storage by the
+action model.
+In subsequent iterations, the action model might ask itself "How did I not see
+that coming?" and then arrive at a conclusion akin to "Oh, I was so focused on
+taking a knight that I wasn't thinking defensively," or whatever might be the
+reason. Those sentences may be non-verbal, each represented by a vector or a
+series of vectors --- and they are events to be remembered.
+
+So if you asked the model, "What were you thinking about?" it could tell you the
+story of its thoughts. Moreover, it could thinking about its own thoughts just
+as it could think about external events.
+
+## Awareness of emotions
+
+I've noticed that people are sometimes bad at knowing their own emotional
+state.
+This might seem surprising if you've never thought about it before, but
+if you have experience with kids, you might have seen a kid who's sleepy,
+angry, jealous, or frustrated, but has trouble being aware of feeling that
+way. I bring this up because the mind model here can account for that
+surprising ability of us to be *unaware* of a state that's so fundamental
+to our state of mind.
+
+Specifically, there's no automatic mechanism in this model to cause the mind to
+experience its emotion as part of a story. The dashed arrow from the emotional
+state to the action model indicates that this input is received as an implicit
+context, but is not received the same way that events are, as part of the
+primary input.
+
+The model is perfectly capable, for example, of being sad without having
+awareness of that sadness. The sadness can operate by decreasing interest in
+what's happening, by a tendency to focus on the cause of the sadness, or by
+perceiving events in a more negative light when there's ambiguity. All of those
+things can happen without the event "now I'm feeling sad" registering in the
+action model. That thought *can* occur --- but it can also not, independent of
+the feeling existing.
+
+# Consciousness
+
+You may not have noticed, but I've avoided using the word *consciousness* in my
+entire description of the model (starting with §2) up until now.
+I've avoided it for two reasons: First, because many people have strong feelings
+about this concept that can get in the way of considering a
+scientific data flow diagram; and, second, the word *consciousness* itself is
+notoriously vague. Because of that, I think the most useful way to talk about
+minds is to focus on specific features that are easier to define. I see
+consciousness as nothing more than a collection of these features.
+
+You probably have your own idea about this nebulous word, and that's fine ---
+there's no need for agreement, just for clear communication.
+The kind of consciousness I'm interested in is *personhood* --- the behavior and
+internal experiences that make us people. Of course, even that description is
+unfair to animals, because (for example) dogs have their own variant of
+consciousness, and we (perhaps unfairly) don't include dogs when we use the word
+*people*. So my adjusted concept is: The mental workings of people as a list
+of features that could apply to any agent.
+
+I've deliberately chosen a round-about definition because I'm focusing on my
+goal: to extend the idea of personhood to other kinds of minds. If I were to
+give you a precise definition without mentioning personhood, then I could get
+some detail wrong and you wouldn't know how to fix it. I want
+this article to be correction-friendly by clearly sharing my goals along the
+way.
+
+## Subjection Experience
+
+Up until here, I have at least listed a few key features of the minds of people:
+agency, learning, thinking, and introspection. I think there are more features
+(such as the ability to speak a language), but I've focused on the features that
+large language models currently lack.
+
+One thing I haven't talked about is the subject experience of being alive. 
+Philosophers like Thomas Nagel have famously argued that some aspects of
+subjective consciousness simply cannot be understood scientifically.
+Some people can read this article --- or the best version of this article, which
+fixes all the flaws in my diagram above --- and see that the behavior might be
+human-like, yet still conclude that the experience of the mind model could never
+be the same.
+
+This is not the place for a full counterargument, but I do want to include a
+brief sketch of a reply. 
 
 
 
@@ -695,7 +809,7 @@ meaning of life, that's an action. I'll elaborate on this below.
 
 To-do: Explain the diagram briefly first.
 
-![Data flow diagram for a model of a mind.](img/mind_model.png)
+![Data flow diagram for a model of a mind.](img/mind_model_v2.png)
 
 # Learning and memory
 
