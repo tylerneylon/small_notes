@@ -31,22 +31,24 @@ Formats:
  $\,$
 ]
 
-This post explains a simple model of how minds may work.
+This article explains a simple model of how minds might work.
 I'm motivated by the success of AI-based language models to look at the future
 of digital minds.
-The model presented here is not detailed
-enough for a full implementation, but it's more detailed than the popular models
-of minds I've been able to read about in my background research.
+I'll present a conceptual data-flow architecture that can account for
+several key features of minds: the ability to initiate actions (agency),
+learning, thinking, and introspection.
+I'll describe the model at a high level, but I'll also try to anchor it in terms
+of existing AI systems to argue that something like this is realistic to build
+today.
 
 I can imagine two goals of a mind model: to understand human brains, or to
 create digital minds.
 These goals overlap
 because the most impressive mind we know of is the
 human brain[^1]. 
-Because of this overlap, I'll aim for a mind model
-that can account for
-human behavior --- though my primary motivation is the creation of digital
-minds.
+My primary motivation is the creation of digital minds, but --- because
+of the overlap in the goals --- I'll aim for a mind model
+that can account for the way human minds work.
 
 <!-- TODO: Turn the footnote into a side note. -->
 
@@ -55,11 +57,12 @@ can exist that are better.
 
 There's still plenty of debate about whether or not a digital mind can ever be
 truly conscious, or have emotions or subjective experiences as humans do. I'm
-convinced they can. Rather than focus on that debate, I'd like
+convinced they can. Rather than focus on that debate, however, I'd like
 to work in the hypothetical world where digital minds are indeed capable
 of all the internal experiences of human minds. If I'm wrong, then this
-becomes a fun collection of speculative blueprints; if I'm right, then
-this post is something
+is a collection of blueprints about behavior alone;
+if I'm right, then
+this article is something
 more --- hopefully, actual progress toward both the creation of digital minds as
 well as some insight into how our own brains may work.
 
@@ -68,7 +71,7 @@ well as some insight into how our own brains may work.
 I'm trying to make a system that can behave like a human.
 Consciousness is a personal motivation, but I'm not going to focus on it as a
 goal because it's difficult to define well and people often disagree about it.
-This posts instead looks at some aspects of minds that --- while still
+This article instead looks at some aspects of minds that --- while still
 challenging --- are a little easier to discuss.
 
 Specifically, I'm trying to build a system that has these features:
