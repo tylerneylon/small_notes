@@ -211,9 +211,10 @@ input stream is the person talking to the model, and the other is the model
 being able to see its own output. Current LLMs see both of these streams, but
 they're set up so that only one person at a time can talk --- the LLM or the
 user.
-The difference here is that the model is designed from the start to
-see its own feedback, constantly, as well as real-time input from "the
-outside," such as the user.
+The difference in the two-input version is that the model is designed from the
+start to
+see its own feedback, constantly, as well as simultaneous real-time input from
+"the outside," such as the user.
 
 Now the LLM can choose to switch, at its own discretion, back and forth between
 a talking and listening mode.
