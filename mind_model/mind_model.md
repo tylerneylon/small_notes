@@ -240,24 +240,24 @@ augmented so that they "remember" certain facts. While I can't confirm details
 internal to OpenAI, my educated guess is that these facts are available to the
 model because they can be selectively added to the prompt. That is, I believe
 the only common way for LLMs to "learn" today is to implement an additional
-system to store data to be learned, and to selectively insert that data into
-prompts when we think it might be useful.
+system to store data from conversations, and to selectively insert that data
+into prompts when we think it might be useful.
 
 This is different from the way we experience life because we gain new abilities,
 and often the things we remember don't seem to be part of some internal prompt.
 For example, when you speak out loud, you don't feel as if your brain chose a
 subset of 100 candidate words to present to you, and you chose from amongst
-those.
+those. Rather, your full spoken vocabulary (something learned) feels
+available to you, without effort, and unfiltered.
 
-Rather, it does seem that the behavior of our organic neurons is updated in
+Some internal data of our organic neurons is updated in
 response to what happens to us. The equivalent of this in the mind
-model is to update
-weights based on experiences.
+model is to update weights based on experiences.
 
 ## Story memory and action memory
 
-To explain the idea in this mind model, I'll split memory into two broad
-categories:
+To explain the ideas of memory in this mind model, I'll split memory into two
+broad categories:
 
 * *Story memory* is the memory of everything that's happened to you; and
 * *action memory* is the modification of how you act based on positive or
@@ -265,11 +265,13 @@ categories:
 
 I'll motivate these categories with a simple example. If a stranger says to you,
 "hey, you can definitely trust me!" then you can immediately store this
-narrative element of your life: this person said these words. Now, is what they
+narrative element of your life: This person said these words. Now, is what they
 said *true*? That's a different matter, and one you should probably decide based
 on more evidence. The *fact* that they said these words can safely go into story
 memory without fact-checing. The *idea* that they're trust-worthy is an
 uncertain claim we can keep around, flagged as "dubious" until further notice.
+Given more feedback, we can choose to act with or without trust toward this
+person, and this goes into our action memory.
 
 When it comes to decisions we make, it's not always obvious if it was a good
 decision until some later point in time. Consider making a move in chess. If
@@ -279,10 +281,13 @@ of delayed feedback on the quality of your decision. When you have delayed
 feedback, it's useful if you can later reinforce good decisions, or discourage
 repetition of mistakes.
 
-The motivation for the "recent memory" module in the mind model is a place that
+Just as language models come with knowledge baked into them, an action model is
+also capable of holding knowledge, but I've included a separate memory module.
+The motivation for the *recent memory* module in the mind model is a place that
 can essentially
-memorize exactly what has happened recently before it's baked into the action
-model. I suspect this is useful because, as you fine-tune LLMs, you can easily
+memorize exactly what has happened recently before it's integrated (through some
+kind of training) into the action model.
+I suspect this is useful because, as you fine-tune LLMs, you can easily
 cause catastrophic forgetting, which is the effective erasure of old memories.
 In other words, in practice it seems that new memories are added
 carefully, perhaps in order to keep old memories intact.
@@ -328,14 +333,9 @@ I've let the long-term memory be implicitly part of the action model because
 this is effectively how language models currently store their version of
 memories.
 
-People tend to remember events in more detail when their emotions were strong at
-the time. Conversely, people tend to forget moments when they were bored or not
-paying attention. Think of the last time you took a well-worn route, such as
-your daily commute to work. You probably don't remember how you spent much of
-that commute, or at least, you probably don't remember the details that don't
-matter, such as the color of the car in front of you at a certain intersection.
-
-The mind model accounts for this by filtering memories through emotional states.
+The mind model accounts for clarity of memory around emotionally charged moments
+--- and lack of memory around unremarkable events --- by filtering memories
+through emotional states.
 In order for the model to remember something, it must be both (a) something the
 action model has paid attention to, and (b) something the mind cares to remember
 based on the emotional state. In addition, the emotional state is part of the
@@ -366,9 +366,9 @@ longer a useful vehicle for this kind of learning.
 
 In this case, I suspect humans learn a process in a more explicit manner. I'm
 convinced that humans learn rational behaviors as action sequences which are
-initiated by triggers. For example, when I want to write an idea that's
+initiated by triggers. For example, when I want to write about an idea that's
 already well formed in my mind, I'll either record a voice memo of the outline,
-or I'll type an outline draft in google docs. That's part of my personal
+or I'll type up a draft in google docs. That's part of my personal
 process. The trigger is the combination of (a) wanting to write an article, and
 (b) not needing to do more research, that is, feeling confident I'm ready to
 write. The action sequence, at a high level, is to make the outline.
@@ -389,8 +389,9 @@ I've phrased things this way specifically because human brains don't seem to be
 good at erasing past memories, but rather they seem to be able to *replace*
 values
 associated with pre-existing keys.
+In this case, the keys are triggers that kick off actions.
 
-### Key-value memory in humans and AI models
+## Key-value memory in humans and AI models
 
 Consider a person with a bad habit, such as biting their nails. It's notoriously
 difficult to enact a strategy of simply stopping such a habit. If you do this
@@ -419,14 +420,14 @@ The similarity between these two "add-only" mechanisms may not be a coincidence;
 perhaps brains internally use something akin to the key-value pairs, just as the
 transformer does.
 
-### How the mind model can meta-learn
+## How the mind model can meta-learn
 
 Meta-learning can happen in the mind model in a few ways:
 
 * **Planning**: When you understand you want to take on a new behavior in the
   future, you can perform explicit planning for your eventual actions. For
   example, you might put something on your calendar, or write down a list of
-  things you want to do today. In this case, the model can simple capture the
+  things you want to do today. In this case, the model can simply capture the
   actions of using a calendar, or of writing a list, and the higher-level goals
   of these actions are only indirectly captured by the neural weights.
 * **Association**: Often you don't know when you'll need to use a new piece of
