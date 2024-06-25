@@ -114,10 +114,11 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   <pre><code>  context -> LLM -> next_token</code></pre>
   <p>By analogy, an action model works like this:</p>
   <pre><code>  context -> Action Model -> next_action</code></pre>
-  <p>Conceptually, I’m thinking of an “action” as a superset of words.
-  If I wanted to say “hello,” then <em>say hello</em> is an action. If I
-  want to walk to the kitchen, that’s an action. And if I want to ponder
-  the meaning of life, that pondering is also an action.</p>
+  <p>Conceptually, I’m thinking of an “action” as something like a
+  superset of words. If I wanted to say “hello,” then <em>say hello</em>
+  is an action. If I want to walk to the kitchen, that’s an action. And
+  if I want to ponder the meaning of life, that pondering is also an
+  action.</p>
   <h2 data-number="2.2" id="the-model-at-a-high-level"><span
   class="header-section-number">2.2</span> The model at a high
   level</h2>
@@ -135,14 +136,15 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   including vision, taste, temperature, pressure, and so on. I’m letting
   this module perform some work as well, since (for example) our vision
   system quickly provides us some analysis of what we see, so that we
-  tend to perceive visual objects rather than a raw image. The other
-  somewhat-simple module is the <em>motor control</em> which we can
-  think of as receiving a conceptual vector (for example, “scratch left
-  ear”), and it can do some processing to translate that high-level
-  command into a series of individual muscle commands. When you memorize
-  a piano song well enough, it feels as if your fingers know the song
-  better than you do, and I believe that indicates some kind of learning
-  has happened within the motor control module.</p>
+  tend to perceive visual objects (“face”) rather than a raw image
+  (“pixels of a face”). The other somewhat-simple module is the
+  <em>motor control</em> which we can think of as receiving a conceptual
+  vector (for example, “scratch left ear”); it can do some processing to
+  translate that high-level command into a series of individual muscle
+  commands. When you memorize a piano song well enough, it feels as if
+  your fingers know the song better than you do, and I believe that
+  indicates some kind of learning has happened within the motor control
+  module.</p>
   <p>The <em>action model</em> has already been introduced. I’ve
   included within it a <em>language encoder</em>, which translates
   incoming signals — seeing written words, hearing spoken words, seeing
@@ -152,8 +154,8 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   model could naturally incorporate within itself a way to standardize
   lexical concepts into consistent vectors. Similarly, the <em>language
   decoder</em> is good at converting those conceptual vectors back out
-  to actions, such as speaking a sentence out loud, or writing something
-  down.</p>
+  to lexical actions, such as speaking a sentence out loud, or writing
+  something down.</p>
   <p>The <em>emotional state</em> module is doing a lot of work: It’s
   meant to represent all of our bodily needs, such as feeling hungry or
   tired, as well as our state of mind, such as feeling elated,
@@ -163,7 +165,7 @@ href="https://tylerneylon.com/a/7date/">264.2024</a></div>
   module.</p>
   <p>I’ve chosen this flow of data carefully. In effect, there are two
   filters on what we store in recent memory: First, when the action
-  model processes a lot of incoming information, it will effectively pay
+  model receives a lot of incoming information, it will effectively pay
   more attention to some information than the rest. As in a language
   model, the unused information essentially disappears from the network
   as it passes through later layers; the attended ideas persist until

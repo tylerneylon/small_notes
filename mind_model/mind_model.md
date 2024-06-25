@@ -116,7 +116,7 @@ By analogy, an action model works like this:
 
     context -> Action Model -> next_action
 
-Conceptually, I'm thinking of an "action" as a superset of words.
+Conceptually, I'm thinking of an "action" as something like a superset of words.
 If I wanted to say "hello," then *say hello* is an action. If I want to
 walk to the kitchen, that's an action. And if I want to ponder the
 meaning of life, that pondering is also an action.
@@ -134,9 +134,10 @@ A couple modules do a lot of work for us, but are easier to understand: The
 *sensory inputs* provide everything we sense, including vision, taste,
 temperature, pressure, and so on. I'm letting this module perform some work as
 well, since (for example) our vision system quickly provides us some analysis of
-what we see, so that we tend to perceive visual objects rather than a raw image.
+what we see, so that we tend to perceive visual objects ("face")
+rather than a raw image ("pixels of a face").
 The other somewhat-simple module is the *motor control* which we can think of as
-receiving a conceptual vector (for example, "scratch left ear"), and it can do
+receiving a conceptual vector (for example, "scratch left ear"); it can do
 some processing to translate that high-level command into a series of individual
 muscle commands. When you memorize a piano song well enough, it feels as if your
 fingers know the song better than you do, and I believe that indicates some
@@ -149,7 +150,7 @@ vector space understood by the system. Since I'm imagining an action model can
 be a slight generalization of a language model, I'm expecting that such an
 action model could naturally incorporate within itself a way to standardize
 lexical concepts into consistent vectors. Similarly, the *language decoder* is
-good at converting those conceptual vectors back out to actions, such as
+good at converting those conceptual vectors back out to lexical actions, such as
 speaking a sentence out loud, or writing something down.
 
 The *emotional state* module is doing a lot of work: It's meant to represent all
@@ -159,7 +160,7 @@ model, our emotional state can change based on what's coming out of the action
 model, and it also filters that output into the *recent memory* module.
 
 I've chosen this flow of data carefully. In effect, there are two filters on
-what we store in recent memory: First, when the action model processes a lot of
+what we store in recent memory: First, when the action model receives a lot of
 incoming information, it will effectively pay more attention to some information
 than the rest. As in a language model, the unused information essentially
 disappears from the network as it passes through later layers; the attended
