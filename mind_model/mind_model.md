@@ -456,17 +456,18 @@ Suppose you've just learned how to play tic-tac-toe, and it's your turn. This is
 an example of thinking that's easy to think about. You're "naughts" (circles),
 and it's your turn on this board:
 
-![It's your turn. Should you go in the middle of the board?](img/tic-tac-toe.png){.maxwidth400px}
+![It's circe's turn. Should the next circle go in the
+middle of the board?](img/tic-tac-toe.png){.maxwidth400px}
 
 You're considering the center square for your next move. I'm suggesting this
-example because, if you're brand new to tic-tac-toe, it's not immediately
+example because, if you're brand new to tic-tac-toe, it's not instantly
 obvious that crosses (x's) will win. After a little thinking or experience, you
 can see this.
 
 The mind model captures thinking as an internal feedback loop. Some of the
 output of the action model is received again as input for the next cycle.
 
-In the tic-tac-toe example, the thought process might work like this:
+In the tic-tac-toe example, your thought process might work like this:
 
 * It's circle's turn. X's will win if they go in the middle next, so I better
   go in the middle.
@@ -485,19 +486,17 @@ That example is more of a caricature compared to the
 exact calculations that actually happen, but it illustrates the way in which a
 feedback loop can support internal thoughts building on each other.
 
-## What is thought?
+## The nature of thought
 
-I won't try to completely answer that question --- but I'm still
-working in the hypothetical scenario where the behavior of the model is similar
-to a human brain's.
-While I'm not going to claim to understand all of human
-thought, we can notice a few interesting things about both this model, and how
-people seem to think. I'll talk about thoughts in an abstract, human-oriented
-manner, and then circle back to the model and explain how these can be captured
-by the mind model.
+I'm not going to claim to understand all of human
+thought, but I will notice a few interesting things about both this mind model
+as well as how people seem to think.
+First I'll talk about thoughts in an abstract, human-oriented
+manner, and then circle back to the model and explain how these modes of thought
+can be captured by the model.
 
-One mode of thought may be **predictions about the future**, including the
-future actions of other agents. This is clearly useful in a game-playing
+One mode of thought is **predicting the future**, including the
+future actions of other agents. This is useful in a game-playing
 context, but it's also useful in many other scenarios. For example, if you're
 negotiating with someone (such as navigating the tricky terrain of a bed-time
 routine with a young child), it's useful to predict how the other agent will
@@ -512,13 +511,14 @@ we want to achieve and simply put in effort to translate that goal into an
 actualization, such as painting an image we have clearly in mind.
 
 A kind of thinking related to both of the above is **problem-solving**, in which
-case we want to achieve something but are uncertain about the best way to move
-forward. A toy example would be someone asking me a riddle. What's better than
-pizza but worse than taxes?[^2] There's an interesting asymmetry to many problems we
-can try to solve: Often it's easier to *recognize* a good solution than it is to
+we want to achieve something but don't know the best way to move
+forward. A toy example would be someone asking you a riddle. What's better than
+pizza but worse than taxes?[^2] There's an interesting asymmetry to many
+problems we can try to solve: Often it's easier to *recognize* a good solution
+than it is to
 *find* that good solution.
 
-[^2]: Nothing.
+[^2]: Answer: Nothing.
 
 So when it comes to problem-solving, our mode of thought may be a feedback loop
 in which a creative component suggests candidate solutions, and an analytic part
@@ -526,17 +526,18 @@ of the action model decides whether or not this is a good candidate.
 
 ## Advanced thinking
 
-More sophisticated versions of each of these processes can exist.
+There are more sophisticated versions of each of these processes.
 
 For one thing, human brains clearly learn from experience. When you're better at
-tic-tac-toe, you can first see patterns that allow you to skip ahead in
-predicting the outcome of different boards --- and eventually you can simply
+tic-tac-toe, you can first see **patterns that allow you to skip ahead in
+predicting** the outcome of different boards --- and eventually you can simply
 memorize the best possible moves. Similar pattern-recognition exists for more
 interesting contexts, from games like chess to real-world challenges, such as
 writing fiction (understanding tropes, audience reactions, dealing with
-narrative road-blocks) or running a business.
+narrative road-blocks), or running a business.
 
-Related to pattern recognition is the concept of an internal mental vocabulary.
+Related to pattern recognition is the concept of an **internal mental
+vocabulary**.
 A simple perspective is that mental "words" match words in the language we know
 best. By the time you learn the word "dog," you have an idea for what a dog is.
 But there are differences between our verbal and mental vocabularies. You can
@@ -544,35 +545,37 @@ recognize an animal you've seen before without having to know what it's called.
 More abstractly, you can know how to deal with a situation you've been in before
 without needing a name for that situation.
 
-Many people experience an inner voice, which seems to be just one particular way
-of thinking. I often thinking without an inner voice. But I do hear one, often,
-when I'm faced with a decision or problem that takes me a little more time to
-solve. Often my inner voice acts, to me, as a simple tool to help organize my
-own thoughts. For example, if I'm analyzing a list of options, I find it useful
-to "say" the options out loud in my mind to crystallize my comprehension of the
-full list. If I'm trying to solve a tricky math or coding question, I'll ask
-"aloud" (in my mind), title-like questions, such as: What's the simplest toy
-version of this problem? What other problems does this remind me of?
+Many people experience an **inner voice**, which seems to be just one particular
+way of thinking. I often thinking without an inner voice. But I do hear one,
+often, when I'm faced with a decision or problem that takes me a little more
+time to solve. Often my inner voice acts, to me, as a simple tool to help
+organize my own thoughts. For example, if I'm analyzing a list of options, I
+find it useful to "say" the options out loud in my mind to crystallize my
+comprehension of the full list. If I'm trying to solve a tricky math or coding
+question, I'll ask "aloud" (in my mind), title-like questions, such as: What's
+the simplest toy version of this problem? What other problems does this remind
+me of?
 
 Whether or not you use an inner voice, there are still meta-protocols available
 to modes of thought. For example, in whatever job you have, you probably have
 faced many different variations of similar challenges. When those challenges can
-be helped with a lot of thought, you probably develop *templates* for solving
-similar problems. Because I like math, I'll use that as an example. In 1945, the
+be helped with a lot of thought, you probably develop **templates for solving
+similar problems**. Because I like math, I'll use that as an example. In 1945, the
 mathematician George Pólya published a small book called *How to Solve It*, in
 which he outlined conceptual guidelines for tackling difficult math problems.
 These are examples of meta-protocols available to modes of thought. They are
 processes that are not learned the way you memorize how to play a piano song,
 but rather that seem to exist at a higher level in a hierarchy of thought
-because there are so many abstract and unknown variables involved in each
-specific implementation of this process.
+because there are abstract and unknown variables involved in each
+specific implementation of the process.
 
 ## How the mind model captures modes of thought
 
 The mind model can capture prediction about the future by implicitly asking:
 What will happen next in this context? Or, more specifically, *what will this
 one agent do next in this situation*? This is captured by the action model just
-as a language model can simulate many different tones of voice. The default mode
+as a language model can simulate different tones of voice, or take on the role
+of different personas. The default mode
 of the action model is to decide what the "self" actor will do, but, by
 adjusting the model's analog of a system prompt, we can ask the same module what
 another agent would do.
@@ -593,7 +596,7 @@ stable-diffusion-style denoiser.
 
 The problem-solving mode of thought is simply a combination of the above two
 pieces. Your creativity can suggest uncertain or incomplete pieces of solutions,
-and your prediction mode of thought can work to ansewr the question: If I tried
+and your prediction mode of thought can work to answer the question: If I tried
 to use this solution, would it solve my problem? This question probably takes on
 more specific formats that depend on the challenge at hand, such as: If I
 communicated
@@ -626,19 +629,21 @@ is an inner voice, which is a special case of the feedback loop where
 the output of your action model makes use of the language decoder, translating
 non-verbal concepts into a verbal sequence. That internal
 verbal sequence is then received by the language encoder, and your internal
-percpetion is very similar to hearing a voice spoken aloud.
+percpetion is similar to hearing a voice spoken aloud.
 
 When you develop habits of thought, such as trying to solve a math problem by
 beginning with a simplified version of the problem, then we're touching on
 processes that aren't directly part of the action model, but rather emerge at a
 higher level. This is analogous to the way we can drive a new car in a new
 country on the other side of the road (perhaps with some stress), even though
-there is certainly no single neuron, or even really a subset of neurons,
-dedicated to this kind of activity. Put another way, when you're studying a CPU
-at a given level of abstraction, it's possible for the system to handle more
-complex operations than what can be done by a lower-level perspective. The mind
-model is captures a low level picture, so that sophisticated actions and ideas
-are out of scope.
+there's no single neuron, or even a specific subset of neurons,
+dedicated to this kind of activity. Put another way, when you're looking at the
+low-level instructions a CPU can execute, you understand that
+it's possible for the system to handle more
+complex operations than what can be obviously done at the low-level perspective.
+The mind
+model captures a low-level picture where highly sophisticated actions and ideas
+are challenging to directly express --- even though they're still possible.
 We just need to know that these more complex actions and ideas are enabled,
 just as a simple Turing machine can support any potential program.
 
