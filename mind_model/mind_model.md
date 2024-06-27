@@ -350,8 +350,8 @@ include pleasure, pain, boredom, happiness, frustration, and any combination of
 states of mind that have a not-purely-rational feeling associated with them.
 The most basic aspect of this --- akin to simple pleasure or pain --- can be
 seen as a relatively quick feedback loop to inform if the recent action memories
-are good are bad for the sake of learning. If a recent action was akin to
-hitting your thumb with a hammer, then you'll have pain as a clue to no longer
+are good are bad for the sake of learning. If you hit your thumb with a hammer,
+then you'll have pain as a clue to no longer
 take that same action. The model captures pain as negative feedback from the
 emotional state.
 
@@ -731,7 +731,7 @@ happened; emotions are things we *can* notice, but might not.
 
 I've avoided using the word *consciousness* in my
 entire description of the model --- from §2 up until now.
-I've avoided it for two reasons: First, because many people have strong feelings
+I've avoided it for two reasons: First, many people have strong feelings
 about this concept that can get in the way of considering a
 scientific data flow diagram; and, second, the word *consciousness* itself is
 notoriously vague. Because of that, I think the most useful way to talk about
@@ -739,24 +739,29 @@ minds is to focus on specific features that are easier to define. I see
 consciousness as nothing more than a collection of these features.
 
 You probably have your own idea about this nebulous word, and that's fine ---
-there's no need for agreement, just for clear communication.
+we don't need to agree on a definition, we just want to communicate clearly.
 The kind of consciousness I'm interested in is *personhood* --- the behavior and
-internal experiences that make us people. Of course, even that description is
+experiences that make us people. Of course, even that description is
 unfair to animals, because (for example) dogs have their own variant of
 consciousness, and we (perhaps unfairly) don't include dogs when we use the word
 *people*. So my adjusted concept is: The mental workings of people as a list
-of features that could apply to any agent.
+of features that could apply to other agents.
 
 I've deliberately chosen a round-about definition because I'm focusing on my
 goal: to extend the idea of personhood to other kinds of minds. If I were to
 give you a precise definition without mentioning personhood, then I could get
 some detail wrong and you wouldn't know how to fix it. I want
 this article to be correction-friendly by clearly sharing my goals along the
-way.
+way. There's vagueness in the concept of *personhood*; I'm not trying to
+solve that vagueness in this article. Rather, I'm presenting a mind model and
+suggesting
+it's a step toward digital minds which may one day be peers of our own.
 
 ## Subjection Experience
 
-Up until here, I have at least listed a few key features of the minds of people:
+Up until now,
+I've focused on four specific
+features of minds:
 agency, learning, thinking, and introspection. I think there are more features
 (such as the ability to speak a language), but I've focused on the features that
 large language models currently lack.
@@ -764,18 +769,19 @@ large language models currently lack.
 One thing I haven't talked about is the subject experience of being alive. 
 Philosophers like Thomas Nagel have famously argued that some aspects of
 subjective consciousness simply cannot be understood scientifically.
-Some people can read this article --- or the best version of this article, which
-fixes all the flaws in my diagram above --- and see that the behavior might be
-human-like, yet still conclude that the experience of the mind model could never
-be the same.
+Some folks who agree with Nagel (or with similar arguments)
+can read this article --- or even the best version of this article, which
+fixes all the flaws in the mind model --- and see that the behavior can be
+human-like, yet these folks would still conclude that the experience of the mind
+model could never be the same as ours.
 
 This is not the place for a full counterargument, but I do want to include a
 brief sketch of a reply. 
 
 ## Negative Arguments
 
-I'm using the term *negative argument* to talk about
-arguments saying that something is impossible, or that
+I'll use the term *negative argument* to talk about
+arguments saying something is impossible, or that
 another argument is wrong, all without saying what is
 possible or what is correct. Contrast that with a
 *positive argument*, one which says something is possible,
@@ -789,8 +795,8 @@ such arguments are wrong. I'll mention some of these arguments,
 but I'm personally more interested in the positive argument
 I'll present afterwards.
 
-Next I'll give a caricature of a back-and-forth discussion
-about subjective experience. I'll present two sides, Nagel's begin
+I'll give a caricature of a back-and-forth discussion
+about subjective experience. I'll present two sides, Nagel's being
 *anti-strong-AI* (arguing that no software can have the same subjective
 experiences as humans), and the other side being *pro-strong-AI*.
 
@@ -817,13 +823,19 @@ experiences as humans), and the other side being *pro-strong-AI*.
    experiment could measure. It's an extraordinary claim, and the onus of proof
    is on your side, not on mine.
 
-INSERT SEGUE HERE
+The discussion might continue. It's slippery because we all *do* have some
+internal, private experiences that are difficult to measure scientifically.
+And, at first glance, it does feel like any simple piece of code that produces
+English sentences couldn't possibly experience the nuanced world that we do.
+
+Fundamentally, we're arguing about whether or not something can exist: a digital
+mind with subjective internal experiences like our own.
 
 ## The Positive Argument
 
-What does this mind model contribute to the above discussion?
+Can this mind model add any insight to the debate?
 
-The negative arguments are like people discussing the possibility of human
+The negative arguments are akin to people discussing the possibility of human
 flight before airplanes were invented. (Admittedly, that's a biased simile.)
 But a great counterargument to "people will never fly" is "I made an airplane."
 I realize the mind model presented here is untested, incomplete, and in need of
@@ -833,20 +845,33 @@ explain subjective experiences scientifically?
 
 For example, when I look at a red apple, I experience a sensation of redness in
 my mind. What might that correspond to in a mind model? This one is easy: There
-can be a point in space that represents redness. If I ask the model about the
-color, it can focus on that aspect of its sensory inputs. Internally, this might
+can be a point in space (an internal vector) that represents redness.
+If I ask the model what color an object is, the model can
+focus on the internal vector representing its color.
+Internally, this might
 look like an attention lookup in which the query vector is asking "what color is
 that object?" the key vector is saying "this is a color for that object", and
-the value vector is saying "it's red."
+the value vector is saying "it's red." This is the beginning of a scientific
+explanation behind subjective experiences.
 
 It might seem overly simplistic to assume something like: For every word X
 there's an "X-ness" vector that captures what it's like to perceive X. But this
 mind model isn't so simple, after all. For example, if the mind model sees a
 color between red and orange --- a specific hue that it has no word for --- then
 it can still have a vector to represent that color, and it can still have the
-same kind of experience it had for redness, but for any color. In other words,
+same kind of experience it had for redness, but for any color.
+If the model sees an animal it didn't know existed --- let's say a coati (which
+look like raccoons with longer snouts and tails) --- there can be an internal
+vector representation that captures its similarity to animals it's seen before.
+Or if the model experiences an emotion that's a new combination of other
+feelings, that can also be captured internally.
+
+In other words,
 this is no finite or hand-made list of possible experiences, but a vast world of
-nuanced, combination-friendly concepts that have been learned.
+nuanced, combination-friendly concepts that have been learned. This
+mathematically infinite world of internal ideas, while daunting, is at once
+something the model can experience as well as something we can study and learn
+about.
 
 # Looking Forward
 
