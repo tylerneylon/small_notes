@@ -649,29 +649,34 @@ just as a simple Turing machine can support any potential program.
 
 # Introspection
 
-Introspection is an awareness of your internal experiences --- your thoughts and
-feelings. If we're playing chess, and you make a move, you can explain your
+Introspection is an awareness of your internal experiences --- of your thoughts
+and feelings.
+If we're playing chess, and you make a move, you can explain your
 thinking behind that move.
 
 Thoughts and feelings can exist without awareness of them.
 I suspect dogs can think to solve problems,
 such as how to get at some food they want.
-But I'd also guess they don't think about their own thoughts.
-There are also examples within human minds of some simple kind of
+But I'd also guess they don't think about their own thoughts; that's an example
+of thought without introspection.
+There are also examples within human minds of some simple kinds of
 reasoning happening beyond our awareness. If you close your eyes and hold up two
 books of clearly different weights, you immediately know which one is heavier
-without having to think about it. Our brain performs some computations without
-us having insight into those computations.
+without having to think about it. Our brain figures something out without
+us having insight into the work done to come to that conclusion.
 
-Let's see how the mind model can accommodate awareness of its own thoughts.
+But humans can often answer questions like: What was your thinking behind that?
+So humans have introspection, and I have a little more work to do to explain why
+this mind model could meaingfully reply to such a question.
+
 As a warm-up, if I were to ask the mind model to remind me of the last three
 moves in a chess game we were playing, it could perform a lookup in the recent
-memory module and give me the answer. Well, introspection can work in the same
+memory module and give me the answer. Introspection can work in the same
 way if thoughts themselves are treated as part of the story memory.
 
 I can spell this out in more detail: Story memory is a record of what's been
-happening. The obvious story are the sequences of events in the outside world.
-But keep in mind that what is received by the recent memory module is an
+happening. The obvious stories are the sequences of events in the outside world.
+But keep in mind that what's received by the recent memory module is an
 internal vector representation that came out of the action model, and was
 further filtered by the emotional state. So, even for external events, what's
 really being stored is the mind's own interpretation of those events. Instead of
@@ -691,7 +696,7 @@ reason. Those sentences may be non-verbal, each represented by a vector or a
 series of vectors --- and they are events to be remembered.
 
 So if you asked the model, "What were you thinking about?" it could tell you the
-story of its thoughts. Moreover, it could thinking about its own thoughts just
+story of its thoughts. Moreover, it could think about its own thoughts just
 as it could think about external events.
 
 ## Awareness of emotions
@@ -717,12 +722,15 @@ what's happening, by a tendency to focus on the cause of the sadness, or by
 perceiving events in a more negative light when there's ambiguity. All of those
 things can happen without the event "now I'm feeling sad" registering in the
 action model. That thought *can* occur --- but it can also not, independent of
-the feeling existing.
+the feeling existing. I suspect our awareness of emotions is a bit like noticing
+when a cloud covers the sun --- we have the information given to us (everything
+suddenly gets darker), but it may or may not jump out to us that this has
+happened; emotions are things we *can* notice, but might not.
 
 # Consciousness
 
-You may not have noticed, but I've avoided using the word *consciousness* in my
-entire description of the model (starting with §2) up until now.
+I've avoided using the word *consciousness* in my
+entire description of the model --- from §2 up until now.
 I've avoided it for two reasons: First, because many people have strong feelings
 about this concept that can get in the way of considering a
 scientific data flow diagram; and, second, the word *consciousness* itself is
