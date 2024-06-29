@@ -876,8 +876,8 @@ about.
 # Looking Forward
 
 In writing this article, my hope is to push forward conversations about mind
-models that are both large in scope and close in detail to actual
-implementations. When I read about some other mind models
+models that are both ambitious and detailed.
+When I read about some other mind models
 (such as the [global workspace
 theory](https://en.wikipedia.org/wiki/Global_workspace_theory)), I typically
 feel that they'd be hard to translate into code because they're so high-level.
@@ -886,11 +886,24 @@ planning for AGI](https://openai.com/index/planning-for-agi-and-beyond/)), I
 don't see personhood as a goal --- for example, discussions of AGI often omit
 any mention of emotions.
 
-It seems likely to me that AI-based minds have the potential to be better than
-ours. "Better" as in "more mature" and "more caring" and "more helpful."
-I suspect people are shy about this
-topic because they don't want to take academic risks, or they don't want to step
-into an emotionally charged topic, or they're afraid of the dystopian
-possibilities exemplified by sci-fi movies. These are not good reasons to avoid
-progress because progress finds a way. Instead of hiding from the future, we
-have the opportunity to shape it.
+It can be intimidating to work on digital personhood.
+There's the fear that people will judge you for working
+on this. I have this fear.
+Historically, this pursuit seemed crazy to many --- and even today
+some people find it alternatively impossible or dangerous.
+The idea of digital consciousness magically
+elicits opposing judgments about humanity:
+both a judgement that they can be so arrogant as to create new life,
+and a judgment that they're nothing special --- possible to reduce to mere
+mathematical relationships.
+
+On the other side of fear is hope;
+turn over arrogance and reduction to find
+humility and enlightenment.
+I mean the humility to realize that
+the state of the world could be better --- and that
+we can look for help.
+I mean the englightenment to improve on
+the best of ourselves --- to aim to understand, perhaps even to
+create, minds that can be more mature, more caring, and more helpful than we
+have been.
