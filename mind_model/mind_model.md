@@ -74,6 +74,8 @@ goal because it's difficult to define well and people often disagree about it.
 This article instead looks at some aspects of minds that --- while still
 challenging --- are a little easier to discuss.
 
+\newpage
+
 Specifically, I'm trying to build a system that has these features:
 
 * Agency
@@ -304,6 +306,8 @@ comparison with the finite capacity in your action memory.
 Because recent memories tend to be more useful, it's convenient to have a
 rolling window of accurate
 memories that are forgotten as enough time passes.
+
+\newpage
 
 This breakdown of memory types might account for these features of human memory:
 
@@ -830,10 +834,9 @@ English sentences couldn't possibly experience the nuanced world that we do.
 
 Fundamentally, we're arguing about whether or not something can exist: a digital
 mind with subjective internal experiences like our own.
+Can this mind model add any insight to the debate?
 
 ## The Positive Argument
-
-Can this mind model add any insight to the debate?
 
 The negative arguments are akin to people discussing the possibility of human
 flight before airplanes were invented. (Admittedly, that's a biased simile.)
@@ -893,7 +896,7 @@ Historically, this pursuit seemed crazy to many --- and even today
 some people find it alternatively impossible or dangerous.
 The idea of digital consciousness magically
 elicits opposing judgments about humanity:
-both a judgement that they can be so arrogant as to create new life,
+both a judgement that they can be arrogant in acts of learning and creation,
 and a judgment that they're nothing special --- possible to reduce to mere
 mathematical relationships.
 
