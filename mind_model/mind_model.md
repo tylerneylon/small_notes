@@ -270,7 +270,7 @@ I'll motivate these categories with a simple example. If a stranger says to you,
 narrative element of your life: This person said these words. Now, is what they
 said *true*? That's a different matter, and one you should probably decide based
 on more evidence. The *fact* that they said these words can safely go into story
-memory without fact-checing. The *idea* that they're trust-worthy is an
+memory without fact-checking. The *idea* that they're trust-worthy is an
 uncertain claim we can keep around, flagged as "dubious" until further notice.
 Given more feedback, we can choose to act with or without trust toward this
 person, and this goes into our action memory.
@@ -710,9 +710,9 @@ state.
 This might seem surprising if you've never thought about it before, but
 if you have experience with kids, you might have seen a kid who's sleepy,
 angry, jealous, or frustrated, but has trouble being aware of feeling that
-way. I bring this up because the mind model here can account for that
-surprising ability of us to be *unaware* of a state that's so fundamental
-to our state of mind.
+way. I bring this up because the mind model can account for the
+remarkable ability we have to be *unaware* of such a fundamental side of
+ourselves.
 
 Specifically, there's no automatic mechanism in this model to cause the mind to
 experience its emotion as part of a story. The dashed arrow from the emotional
@@ -772,7 +772,7 @@ large language models currently lack.
 
 One thing I haven't talked about is the subject experience of being alive. 
 Philosophers like Thomas Nagel have famously argued that some aspects of
-subjective consciousness simply cannot be understood scientifically.
+consciousness simply cannot be understood scientifically.
 Some folks who agree with Nagel (or with similar arguments)
 can read this article --- or even the best version of this article, which
 fixes all the flaws in the mind model --- and see that the behavior can be
