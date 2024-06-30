@@ -48,7 +48,7 @@ if __name__ == '__main__':
     note_starts = list(re.finditer(r'<li id="fn\d+', content))
     note_starts = [ns.start() for ns in note_starts]
     notes = [
-            re.search(r'<p>(.*?)</p>', content[ns:], re.S).group(1)
+            re.search(r'<p>(.*?)<a', content[ns:], re.S).group(1)
             for ns in note_starts
     ]
 
