@@ -884,10 +884,11 @@ When I read about some other mind models
 (such as the [global workspace
 theory](https://en.wikipedia.org/wiki/Global_workspace_theory)), I typically
 feel that they'd be hard to translate into code because they're so high-level.
-Yet when I read about engineer-oriented AI directions (such as [OpenAI's
-planning for AGI](https://openai.com/index/planning-for-agi-and-beyond/)), I
-don't see personhood as a goal --- for example, discussions of AGI often omit
-any mention of emotions.
+Yet when I read about engineer-oriented AI directions
+(such as articles about [artificial general
+intelligence](https://en.wikipedia.org/wiki/Artificial_general_intelligence)),
+I don't see personhood as a goal --- for example, discussions of AGI typically
+focus away from emotion.
 
 It can be intimidating to work on digital personhood.
 There's the fear that people will judge you for working
