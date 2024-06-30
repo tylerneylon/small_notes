@@ -1,6 +1,6 @@
 % A Model of a Mind
 % Tyler Neylon
-% 264.2024
+% 346.2024
 
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\N}{\mathbb{N}}
