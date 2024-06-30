@@ -26,8 +26,8 @@
 
 [
 Formats:
- [html](http://tylerneylon.com/b/mind_model/mind_model.html) |
- [pdf](http://tylerneylon.com/b/mind_model/mind_model.pdf)
+ [html](http://tylerneylon.com/a/mind_model/mind_model.html) |
+ [pdf](http://tylerneylon.com/a/mind_model/mind_model.pdf)
  $\,$
 ]
 
