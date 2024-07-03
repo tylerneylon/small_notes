@@ -123,6 +123,8 @@ If I wanted to say "hello," then *say hello* is an action. If I want to
 walk to the kitchen, that's an action. And if I want to ponder the
 meaning of life, that pondering is also an action.
 
+\newpage
+
 ## The model at a high level
 
 Here's the model:
@@ -903,11 +905,11 @@ mathematical relationships.
 
 On the other side of fear is hope;
 turn over arrogance and reduction to find
-humility and enlightenment.
-I mean the humility to realize that
+humility and enlightenment:
+the humility to realize that
 the state of the world could be better --- and that
 we can look for help.
-I mean the englightenment to improve on
-the best of ourselves --- to aim to understand, perhaps even to
+And the englightenment to improve on
+the best of ourselves; to aim to understand, even to
 create, minds that can be more mature, more caring, and more helpful than we
 have been.
